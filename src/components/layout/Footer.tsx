@@ -37,7 +37,7 @@ export const Footer = () => {
           <ul className="space-y-3 text-sm text-primary-foreground/85">
             <li className="flex gap-2"><MapPin className="h-4 w-4 mt-0.5 shrink-0" /> {t('contact.addressValue')}</li>
             <li className="flex gap-2"><Mail className="h-4 w-4 mt-0.5 shrink-0" /> info@ymnt-foundation.org</li>
-            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0" dir="ltr" /> <span dir="ltr">+967 4 123 456</span></li>
+            <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0" /> <span dir="ltr">+967 4 123 456</span></li>
           </ul>
           <div className="flex gap-3 mt-5">
             {[Facebook, Twitter, Linkedin, Youtube].map((Icon, i) => (
