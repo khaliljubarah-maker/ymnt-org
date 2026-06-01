@@ -1,12 +1,19 @@
-import edu from '@/assets/photos/youth-training-02.jpg';
-import climate from '@/assets/photos/climate-solar-01.jpg';
-import water from '@/assets/photos/climate-solar-03.jpg';
-import women from '@/assets/photos/community-leadership.jpg';
-import advocacy from '@/assets/photos/youth-banner.jpg';
-import partnership from '@/assets/photos/community-meeting-02.jpg';
-import school from '@/assets/photos/climate-mural-03.jpg';
+import solarCookerImg from '@/assets/photos/climate-cooker.jpg';
+import solarCookerImg2 from '@/assets/photos/youth-solar-cooker.jpg';
+import muralImg from '@/assets/photos/climate-mural-02.jpg';
+import muralImg2 from '@/assets/photos/climate-mural-03.jpg';
+import forumImg from '@/assets/photos/community-forum.jpg';
+import forumImg2 from '@/assets/photos/youth-banner.jpg';
+import youthTraining from '@/assets/photos/youth-training-01.jpg';
+import youthTraining2 from '@/assets/photos/youth-training-02.jpg';
+import youthGraduates from '@/assets/photos/youth-graduates.jpg';
+import dialogue from '@/assets/photos/community-dialogue.jpg';
+import leadership from '@/assets/photos/community-leadership.jpg';
+import solar01 from '@/assets/photos/climate-solar-01.jpg';
+import solar03 from '@/assets/photos/climate-solar-03.jpg';
+import meeting from '@/assets/photos/community-meeting-02.jpg';
 
-export type Category = 'climate' | 'education' | 'water' | 'women' | 'protection';
+export type Category = 'climate' | 'education' | 'advocacy' | 'capacity';
 
 export interface Project {
   slug: string;
@@ -26,105 +33,283 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: 'climate-smart-terraces',
-    title: { en: 'Climate-Smart Terraces Revival', ar: 'إحياء المدرجات الزراعية الذكية مناخيًا' },
+    slug: 'climate-justice-forum-phase2',
+    title: {
+      en: 'Climate & Social Justice Forum — Phase II',
+      ar: 'منتدى العدالة المناخية والاجتماعية — المرحلة الثانية',
+    },
     excerpt: {
-      en: 'Restoring ancient terraced farms in Taiz mountains to fight erosion and food insecurity.',
-      ar: 'إعادة تأهيل المدرجات الزراعية القديمة في جبال تعز لمكافحة التعرية وانعدام الأمن الغذائي.',
+      en: 'Advanced training for 20 young leaders, investigative reporting on water governance, and community accountability hearings in Taiz.',
+      ar: 'تدريب متقدم لـ 20 شاباً وشابة، وتقرير استقصائي حول حوكمة المياه، وجلسات مساءلة مجتمعية في تعز.',
     },
     overview: {
-      en: 'Working with 1,200 farming households across four districts, we rehabilitate centuries-old stone terraces, introduce drought-resilient seeds and rainwater harvesting.',
-      ar: 'نعمل مع 1,200 أسرة زراعية في أربع مديريات لإعادة تأهيل المدرجات الحجرية وإدخال البذور المقاومة للجفاف وحصاد مياه الأمطار.',
+      en: 'Phase II (2025–2026) delivered an advanced training program in social accountability, investigative journalism, proposal writing and digital safety. The project conducted field surveys producing a qualitative investigative report on urban water governance in Taiz, culminating in two community accountability hearings with the Water Corporation and Cleaning Fund, plus a working paper translating outcomes into actionable policies.',
+      ar: 'نفذت المرحلة الثانية (2025–2026) برنامجاً تدريبياً متقدماً لـ 20 شاباً وشابة في المساءلة المجتمعية والصحافة الاستقصائية وكتابة مقترحات المشاريع والسلامة الرقمية. تضمن المشروع نزولاً ومسحاً ميدانياً لإنتاج تقرير استقصائي نوعي حول حوكمة المياه في تعز، توّج بتنفيذ جلستي استماع ومساءلة مجتمعية مع مؤسسة المياه وصندوق النظافة، وإصدار ورقة عمل لتحويل المخرجات إلى سياسات قابلة للتنفيذ.',
     },
-    category: 'climate',
+    category: 'advocacy',
     status: 'ongoing',
-    image: climate,
+    image: forumImg2,
     location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
-    beneficiaries: '7,800',
-    duration: '2024–2027',
-    donor: 'EU Humanitarian Aid',
+    beneficiaries: '20 youth leaders + community',
+    duration: '2025–2026',
+    donor: '—',
     objectives: {
-      en: ['Rehabilitate 540 hectares of terraced land', 'Train 1,200 farmers in climate-smart agriculture', 'Install 60 rainwater harvesting systems'],
-      ar: ['إعادة تأهيل 540 هكتارًا من الأراضي المدرجة', 'تدريب 1,200 مزارع على الزراعة الذكية مناخيًا', 'تركيب 60 نظامًا لحصاد مياه الأمطار'],
+      en: [
+        'Advanced training in accountability, investigative journalism, proposal writing and digital safety',
+        'Produce an investigative report on water governance in Taiz',
+        'Hold community accountability hearings with local authorities',
+      ],
+      ar: [
+        'تدريب متقدم في المساءلة والصحافة الاستقصائية وكتابة المقترحات والسلامة الرقمية',
+        'إنتاج تقرير استقصائي حول حوكمة المياه في تعز',
+        'تنفيذ جلسات مساءلة مجتمعية مع السلطات المحلية',
+      ],
     },
     results: {
-      en: ['38% increase in seasonal yield', '210 hectares restored to date', '410 women trained'],
-      ar: ['زيادة بنسبة 38% في الإنتاج الموسمي', 'استعادة 210 هكتارات حتى الآن', 'تدريب 410 امرأة'],
+      en: [
+        '20 youth leaders trained in advanced advocacy skills',
+        'Investigative report: "Deconstructing the Urban Water Crisis in Taiz"',
+        'Working paper (2026): "Water Crisis: From Consumption to Production"',
+        '2 community accountability hearings with Water Corporation and Cleaning Fund',
+      ],
+      ar: [
+        'تدريب 20 قائداً شاباً في مهارات المناصرة المتقدمة',
+        'تقرير استقصائي: "تفكيك أزمة المياه الحضرية في تعز"',
+        'ورقة عمل (2026): "أزمة المياه: من الاستهلاك إلى الإنتاج"',
+        'جلستا مساءلة مجتمعية مع مؤسسة المياه وصندوق النظافة',
+      ],
     },
   },
   {
-    slug: 'safe-learning-spaces',
-    title: { en: 'Safe Learning Spaces', ar: 'فضاءات تعلّم آمنة' },
+    slug: 'climate-justice-forum',
+    title: {
+      en: 'Climate & Social Justice Forum — Phase I',
+      ar: 'منتدى العدالة الاجتماعية والمناخية — المرحلة الأولى',
+    },
     excerpt: {
-      en: 'Rebuilding damaged schools and providing psychosocial support for displaced children.',
-      ar: 'إعادة بناء المدارس المتضررة وتوفير الدعم النفسي للأطفال النازحين.',
+      en: 'Institutionalising youth-led climate action in Taiz through capacity building, policy papers and digital advocacy.',
+      ar: 'مأسسة العمل المناخي الشبابي في تعز من خلال بناء القدرات وأوراق السياسات والمناصرة الرقمية.',
     },
     overview: {
-      en: 'A multi-year program rehabilitating 24 schools and supporting 9,000 children with quality education, learning materials and trauma-informed care.',
-      ar: 'برنامج متعدد السنوات لإعادة تأهيل 24 مدرسة ودعم 9,000 طفل بتعليم نوعي ومواد تعلّمية ورعاية نفسية.',
+      en: 'A dual-track intervention (2024) strengthening Ymnt\'s internal capacity while training 20 marginalised young women and men to launch the independent "Climate & Social Justice Forum" — a sustained platform for knowledge production, policy drafting and digital advocacy campaigns.',
+      ar: 'تدخل استراتيجي مزدوج المسار (2024) عزز البنية الداخلية للمؤسسة، فيما درّب 20 شاباً وشابة من الفئات المهمشة وصولاً إلى تأسيس "منتدى العدالة الاجتماعية والمناخية" كمنصة شبابية مستقلة لإنتاج المعرفة وصياغة السياسات وقيادة المناصرة الرقمية.',
+    },
+    category: 'capacity',
+    status: 'completed',
+    image: forumImg,
+    location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
+    beneficiaries: '20 youth + community',
+    duration: '2024',
+    donor: '—',
+    objectives: {
+      en: [
+        'Strengthen Ymnt\'s institutional and operational capacity',
+        'Train 20 marginalised youth in climate action, leadership and advocacy',
+        'Produce specialised policy papers diagnosing environmental and social challenges',
+        'Run digital awareness campaigns on climate issues',
+      ],
+      ar: [
+        'تعزيز البنية التحتية والقدرات التشغيلية لمؤسسة يمنت',
+        'تدريب 20 شاباً وشابة من الفئات المهمشة في العمل المناخي والقيادة والمناصرة',
+        'إنتاج أوراق سياسات متخصصة تشخص التحديات البيئية والمجتمعية',
+        'تنفيذ حملات توعوية رقمية حول قضايا المناخ',
+      ],
+    },
+    results: {
+      en: [
+        'Official launch of the Climate & Social Justice Forum',
+        '20 youth leaders graduated, capable of leading climate and community action',
+        'Policy paper: "Climate Change Impacts in Yemen"',
+        'Policy paper: "Barriers to Social & Environmental Justice in Yemen"',
+        'Strategic digital advocacy campaign across social platforms',
+      ],
+      ar: [
+        'الإطلاق الرسمي لمنتدى العدالة الاجتماعية والمناخية',
+        'تخريج 20 قائداً شاباً قادرين على قيادة العمل المناخي والمجتمعي',
+        'ورقة سياسات: "تأثيرات التغير المناخي في الجمهورية اليمنية"',
+        'ورقة سياسات: "عوائق تحقيق العدالة الاجتماعية والبيئية في اليمن"',
+        'حملة مناصرة رقمية استراتيجية عبر منصات التواصل الاجتماعي',
+      ],
+    },
+  },
+  {
+    slug: 'sasa-peace',
+    title: {
+      en: 'Sasa Peace — Digital Education & Peacebuilding',
+      ar: 'ساسة سلام — التعليم الرقمي وبناء السلام',
+    },
+    excerpt: {
+      en: 'A dedicated e-learning platform for the History & Political Science Department at Taiz University to fight academic dropout.',
+      ar: 'منصة تعليم رقمي مخصصة لقسم التاريخ والعلوم السياسية بجامعة تعز للحد من التسرب الأكاديمي.',
+    },
+    overview: {
+      en: 'Sasa Peace responded to Yemen\'s higher-education crisis by designing a comprehensive digital learning platform for the History & Political Science Department at Taiz University. The platform hosts curricula and references in good governance, peace and gender, complemented by classroom upgrades (Data Show projector) — moving from traditional teaching to inclusive, gender-sensitive digital education.',
+      ar: 'استجابة نوعية لأزمة التعليم العالي في اليمن، حيث صممت المؤسسة منصة تعليم رقمي متكاملة لطلاب قسم التاريخ والعلوم السياسية بجامعة تعز، مجهزة بكافة المقررات والمراجع التخصصية في الحكم الرشيد والسلام والنوع الاجتماعي، مع تحديث القاعات بأجهزة عرض (Data Show) — للانتقال من التعليم التقليدي إلى التعليم الرقمي الدامج والحساس للنوع الاجتماعي.',
     },
     category: 'education',
-    status: 'ongoing',
-    image: edu,
-    location: { en: 'Taiz & Lahj', ar: 'تعز ولحج' },
-    beneficiaries: '9,000',
-    duration: '2023–2026',
-    donor: 'UNICEF Yemen',
+    status: 'completed',
+    image: youthTraining2,
+    location: { en: 'Taiz University, Al-Qahira District', ar: 'جامعة تعز، مديرية القاهرة' },
+    beneficiaries: '158 direct · 140 indirect',
+    duration: '11–30 January 2022',
+    donor: 'Generations Without Qat Foundation',
     objectives: {
-      en: ['Rehabilitate 24 schools', 'Train 320 teachers', 'Distribute 9,000 learning kits'],
-      ar: ['إعادة تأهيل 24 مدرسة', 'تدريب 320 معلمًا ومعلمة', 'توزيع 9,000 حقيبة تعلّمية'],
+      en: [
+        'Design and launch a dedicated e-learning website for the department',
+        'Upgrade classroom teaching tools (Data Show projector + stationery)',
+        'Mainstream gender by engaging young women in the technical team',
+      ],
+      ar: [
+        'تصميم وإطلاق موقع إلكتروني تعليمي مخصص للقسم',
+        'تحديث أدوات التدريس بالقاعات (جهاز عرض رقمي ومستلزمات قرطاسية)',
+        'تعميم النوع الاجتماعي عبر إشراك الشابات في الفريق التقني',
+      ],
     },
     results: {
-      en: ['18 schools reopened', '6,400 children re-enrolled', '92% attendance rate'],
-      ar: ['إعادة فتح 18 مدرسة', 'إعادة تسجيل 6,400 طفل', 'نسبة حضور 92%'],
+      en: [
+        'Integrated e-learning platform with full curriculum, free access for 280 students',
+        'Data Show projector and supplies delivered to the department',
+        'Sustainability MoU signed with the department head',
+        'Young technical team (incl. a female designer) launched their own web-design start-up in Taiz',
+      ],
+      ar: [
+        'منصة تعليم رقمي متكاملة بالمنهج كاملاً ووصول مجاني لـ 280 طالباً وطالبة',
+        'تسليم جهاز عرض رقمي ومستلزمات قرطاسية للقسم',
+        'توقيع مذكرة استدامة مع رئاسة القسم',
+        'تأسيس الفريق الفني الشاب (وبينهم شابة) لشركة ناشئة لتصميم المواقع في تعز',
+      ],
     },
   },
   {
-    slug: 'water-for-life',
-    title: { en: 'Water For Life', ar: 'مياه للحياة' },
-    excerpt: { en: 'Sustainable WASH solutions for drought-affected rural communities.', ar: 'حلول مياه وإصحاح مستدامة للمجتمعات الريفية المتأثرة بالجفاف.' },
-    overview: {
-      en: 'Solar-powered water systems, hygiene promotion and women-led water committees in 32 villages.',
-      ar: 'أنظمة مياه تعمل بالطاقة الشمسية، وحملات نظافة، ولجان مياه نسائية في 32 قرية.',
+    slug: 'solar-cookers',
+    title: {
+      en: 'Solar Cookers — Environmental Justice & Green Empowerment',
+      ar: 'الطباخات الشمسية — العدالة البيئية والتمكين الأخضر',
     },
-    category: 'water',
-    status: 'ongoing',
-    image: water,
-    location: { en: 'Ibb & Al-Dhale', ar: 'إب والضالع' },
-    beneficiaries: '24,500',
-    duration: '2024–2026',
-    donor: 'GIZ',
+    excerpt: {
+      en: 'Transferring solar-cooker technology to Taiz to curb deforestation and equip youth with green skills.',
+      ar: 'نقل تكنولوجيا الطباخ الشمسي إلى تعز للحد من قطع الأشجار وتزويد الشباب بمهارات خضراء.',
+    },
+    overview: {
+      en: 'A flagship green intervention linking emergency response with long-term environmental solutions. Through specialised workshops, 10 young women and men from vulnerable groups were trained to locally manufacture solar cookers from local materials — reducing logging, easing household fuel costs, and protecting women and girls from the safety and health risks of firewood collection.',
+      ar: 'أحد أبرز التدخلات البيئية المستدامة التي تربط الاستجابة الإنسانية بالحلول البيئية طويلة الأجل. عبر ورش تدريبية متخصصة، تم تأهيل 10 شباب وشابات من الفئات الضعيفة على صناعة الطباخات الشمسية محلياً من خامات محلية — مما يحد من التحطيب الجائر، ويخفف نفقات الوقود على الأسر، ويحمي النساء والفتيات من مخاطر جمع الحطب.',
+    },
+    category: 'climate',
+    status: 'completed',
+    image: solarCookerImg,
+    location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
+    beneficiaries: '10 trainees + low-income families',
+    duration: '2022',
+    donor: '—',
     objectives: {
-      en: ['Install 32 solar water systems', 'Form 32 women-led water committees', 'Reach 24,500 people with safe water'],
-      ar: ['تركيب 32 نظام مياه شمسي', 'تشكيل 32 لجنة مياه نسائية', 'الوصول إلى 24,500 شخص بمياه آمنة'],
+      en: [
+        'Build green capacities of 10 young women and men in solar-cooker manufacturing',
+        'Localise solar-cooker technology in Taiz to reduce deforestation',
+        'Provide families with a safe, free energy alternative',
+      ],
+      ar: [
+        'بناء القدرات الخضراء لـ 10 شباب وشابات في صناعة الطباخات الشمسية',
+        'توطين تكنولوجيا الطباخ الشمسي في تعز للحد من قطع الأشجار',
+        'تزويد الأسر ببديل طاقة آمن ومجاني',
+      ],
     },
     results: {
-      en: ['14 systems operational', '11,200 people served', 'Waterborne disease down 47%'],
-      ar: ['تشغيل 14 نظامًا', 'خدمة 11,200 شخص', 'انخفاض الأمراض المنقولة بالمياه بنسبة 47%'],
+      en: [
+        'Solar-cooker technology introduced in Taiz for the first time',
+        '10 young women and men trained in design, manufacture and testing',
+        'Knowledge guide "Solar Cooker Manufacturing Manual" published',
+        'Gradual reduction in firewood use in targeted areas',
+      ],
+      ar: [
+        'إدخال تكنولوجيا الطباخ الشمسي إلى تعز لأول مرة',
+        'تدريب 10 شباب وشابات على التصميم والصناعة والاختبار',
+        'إصدار "دليل صناعة الطباخ الشمسي" كمرجع معرفي',
+        'الاستغناء التدريجي عن التحطيب في المناطق المستهدفة',
+      ],
     },
   },
   {
-    slug: 'women-economic-empowerment',
-    title: { en: 'Women Economic Empowerment', ar: 'تمكين النساء اقتصاديًا' },
-    excerpt: { en: 'Cooperatives, micro-enterprise and financial inclusion for rural Yemeni women.', ar: 'تعاونيات ومشاريع صغيرة وإدماج مالي للنساء الريفيات.' },
-    overview: {
-      en: 'Supporting 18 cooperatives with grants, business training and market linkages — focused on food processing, handicrafts and beekeeping.',
-      ar: 'دعم 18 تعاونية بالمنح والتدريب وربط السوق — في تصنيع الأغذية والحرف اليدوية وتربية النحل.',
+    slug: 'sawaseya',
+    title: {
+      en: 'Sawaseya — Digital Advocacy & Social Justice',
+      ar: 'سواسية — المناصرة الرقمية والعدالة الاجتماعية',
     },
-    category: 'women',
-    status: 'ongoing',
-    image: women,
-    location: { en: 'Taiz, Hodeidah', ar: 'تعز، الحديدة' },
-    beneficiaries: '2,300',
-    duration: '2023–2025',
-    donor: 'UN Women',
+    excerpt: {
+      en: 'A digital and field advocacy campaign confronting discrimination against marginalised communities in Taiz schools.',
+      ar: 'حملة مناصرة رقمية وميدانية لمواجهة التمييز ضد الفئات المهمشة في مدارس تعز.',
+    },
+    overview: {
+      en: 'Sawaseya combined development-driven media on social platforms with field tactics (mural art) to raise awareness around human rights, end marginalisation and stigma, and showcase marginalised leaders as genuine partners in peacebuilding.',
+      ar: 'حملة مناصرة شاملة جمعت بين الإعلام التنموي على منصات التواصل والتكتيكات الميدانية (الفن الجداري) لرفع الوعي بحقوق الإنسان، وإنهاء التهميش والوصم، وإبراز قيادات المهمشين كشركاء حقيقيين في بناء السلام.',
+    },
+    category: 'advocacy',
+    status: 'completed',
+    image: muralImg2,
+    location: { en: 'Taiz – Al-Qahira District (field + digital)', ar: 'تعز - مديرية القاهرة (ميدانياً ورقمياً)' },
+    beneficiaries: '1,069 direct · 1,360 indirect',
+    duration: '1–30 November 2021',
+    donor: 'Shabab Saba Foundation for Development',
     objectives: {
-      en: ['Establish 18 women cooperatives', 'Train 2,000 women in business skills', 'Disburse 500 micro-grants'],
-      ar: ['إنشاء 18 تعاونية نسائية', 'تدريب 2,000 امرأة على مهارات الأعمال', 'صرف 500 منحة صغيرة'],
+      en: [
+        'Launch a specialised digital platform on human-rights awareness and peacebuilding',
+        'Promote inspiring role models from marginalised youth and women',
+        'Counter discrimination and racism in school environments through expressive art',
+      ],
+      ar: [
+        'إطلاق منصة رقمية متخصصة لتوعية المجتمع بحقوق الإنسان وبناء السلام',
+        'الترويج لنماذج قيادية ملهمة من الشباب والنساء المهمشين',
+        'مكافحة التمييز والعنصرية في البيئات التعليمية عبر التدخلات الفنية',
+      ],
     },
     results: {
-      en: ['12 cooperatives generating monthly revenue', '1,400 women earning income', '$280K total disbursed'],
-      ar: ['12 تعاونية تحقق إيرادات شهرية', '1,400 امرأة تكسب دخلًا', 'إجمالي الصرف 280 ألف دولار'],
+      en: [
+        'Sawaseya digital platform launched (400+ engaged followers)',
+        '5 visual posters, 3 rights-based cartoons, 9 development articles, 3 human stories, 18 boosted strategic posts',
+        '2 documentary video reports of inspiring marginalised leaders, screened to 20 activists on Zoom',
+        '2 expressive murals in front of Hamza Girls School and Mu\'adh Boys School reaching 1,000+ students',
+      ],
+      ar: [
+        'إطلاق منصة سواسية الرقمية (+400 متابع متفاعل)',
+        '5 صور تعبيرية و3 رسوم كاريكاتورية حقوقية و9 مقالات تنموية و3 قصص إنسانية و18 منشوراً مموّلاً استراتيجياً',
+        'ريبورتاجان مرئيان لقصص نجاح قيادية ملهمة، عُرضا في ندوة Zoom لـ 20 ناشطاً',
+        'جداريتان فنيتان أمام مدرستي الحمزة للبنات ومعاذ للبنين تصلان لأكثر من 1,000 طالب وطالبة',
+      ],
+    },
+  },
+  {
+    slug: 'noortmona',
+    title: {
+      en: 'Noortmona — Solar Lighting for Safer Neighbourhoods',
+      ar: 'نورتمونا — إنارة شمسية لأحياء أكثر أماناً',
+    },
+    excerpt: {
+      en: 'Solar street lighting in three Taiz neighbourhoods to strengthen environmental justice and community security.',
+      ar: 'إنارة شمسية لشوارع ثلاثة أحياء في تعز لتعزيز العدالة البيئية والأمن المجتمعي.',
+    },
+    overview: {
+      en: 'Ymnt\'s founding intervention: installing 15 solar streetlights across three Taiz neighbourhoods while engaging marginalised youth in planning and implementation — embedding clean energy and civic participation from day one.',
+      ar: 'التدخل التأسيسي لمؤسسة يمنت: تركيب 15 إنارة شمسية في ثلاثة أحياء بتعز، مع إشراك الشباب من الفئات الضعيفة في التخطيط والتنفيذ — لترسيخ الطاقة النظيفة والمشاركة المدنية منذ البداية.',
+    },
+    category: 'climate',
+    status: 'completed',
+    image: solar01,
+    location: { en: 'Taiz – three neighbourhoods', ar: 'تعز - ثلاثة أحياء' },
+    beneficiaries: 'Residents of 3 neighbourhoods',
+    duration: '2021',
+    donor: '—',
+    objectives: {
+      en: [
+        'Promote environmental justice and community safety through clean energy',
+        'Engage marginalised youth in planning and implementing community infrastructure',
+      ],
+      ar: [
+        'تعزيز العدالة البيئية والأمن المجتمعي عبر الطاقة النظيفة',
+        'إشراك الشباب من الفئات الضعيفة في التخطيط والتنفيذ للبنية المجتمعية',
+      ],
+    },
+    results: {
+      en: ['15 solar streetlights installed', '3 neighbourhoods served', 'Marginalised youth integrated into project leadership'],
+      ar: ['تركيب 15 إنارة شمسية', 'خدمة 3 أحياء', 'دمج الشباب من الفئات المهمشة في قيادة المشروع'],
     },
   },
 ];
@@ -141,84 +326,106 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
-    slug: 'cop29-yemen-voices',
-    title: { en: 'Bringing Yemeni voices to COP29', ar: 'صوت اليمن في مؤتمر COP29' },
-    excerpt: { en: 'Our director joined a panel on climate adaptation in conflict-affected states.', ar: 'مديرتنا التنفيذية شاركت في جلسة عن التكيّف المناخي في الدول المتأثرة بالنزاع.' },
-    body: { en: 'At COP29 in Baku, our delegation called for direct climate finance for Yemeni civil society and a binding loss-and-damage framework for the MENA region.', ar: 'في مؤتمر الأطراف COP29 في باكو، طالب وفدنا بتمويل مناخي مباشر للمجتمع المدني اليمني وإطار ملزم للخسائر والأضرار لمنطقة الشرق الأوسط وشمال أفريقيا.' },
-    date: '2025-11-18',
+    slug: 'water-governance-report-2026',
+    title: {
+      en: 'New investigative report: Deconstructing the urban water crisis in Taiz',
+      ar: 'تقرير استقصائي جديد: تفكيك أزمة المياه الحضرية في تعز',
+    },
+    excerpt: {
+      en: 'From natural scarcity to a governance and institutional waste crisis — our 2026 report.',
+      ar: 'من ندرة طبيعية إلى أزمة حوكمة وهدر مؤسسي — تقريرنا لعام 2026.',
+    },
+    body: {
+      en: 'As part of Phase II of the Climate & Social Justice Forum, Ymnt published a qualitative investigative report on urban water governance in Taiz, followed by two community accountability hearings with the Water Corporation and Cleaning Fund.',
+      ar: 'في إطار المرحلة الثانية من منتدى العدالة المناخية والاجتماعية، أصدرت مؤسسة يمنت تقريراً استقصائياً نوعياً حول حوكمة المياه الحضرية في تعز، أعقبته جلستا مساءلة مجتمعية مع مؤسسة المياه وصندوق النظافة.',
+    },
+    date: '2026-03-10',
+    category: { en: 'Report', ar: 'تقرير' },
+    image: dialogue,
+  },
+  {
+    slug: 'forum-graduation-2024',
+    title: {
+      en: '20 young leaders graduate from the Climate & Social Justice Forum',
+      ar: 'تخريج 20 قائداً شاباً من منتدى العدالة المناخية والاجتماعية',
+    },
+    excerpt: {
+      en: 'A new generation of marginalised youth equipped to lead climate and rights advocacy in Yemen.',
+      ar: 'جيل جديد من الشباب المهمشين مؤهل لقيادة المناصرة المناخية والحقوقية في اليمن.',
+    },
+    body: {
+      en: 'Phase I (2024) concluded with the official launch of the Forum, two published policy papers and a wide digital advocacy campaign.',
+      ar: 'اختتمت المرحلة الأولى (2024) بالإطلاق الرسمي للمنتدى وإصدار ورقتي سياسات وحملة مناصرة رقمية واسعة.',
+    },
+    date: '2024-12-18',
+    category: { en: 'Milestone', ar: 'إنجاز' },
+    image: youthGraduates,
+  },
+  {
+    slug: 'environmental-honor-charter',
+    title: {
+      en: '“Environmental Honor Charter” signed with local authority and community leaders',
+      ar: 'توقيع "وثيقة شرف للحفاظ على البيئة" مع السلطة المحلية وعقال الحارات',
+    },
+    excerpt: {
+      en: 'A consultative meeting that turned into a binding community commitment for the environment.',
+      ar: 'لقاء تشاوري تحوّل إلى التزام مجتمعي ملزم تجاه البيئة.',
+    },
+    body: {
+      en: 'Ymnt convened the local authority, security, and neighbourhood elders for a consultative meeting in Taiz, culminating in the signing of an "Environmental Honor Charter".',
+      ar: 'جمعت مؤسسة يمنت السلطة المحلية والأمن وعقال الحارات في لقاء تشاوري في تعز، توّج بتوقيع "وثيقة شرف للحفاظ على البيئة".',
+    },
+    date: '2025-09-04',
     category: { en: 'Advocacy', ar: 'مناصرة' },
-    image: advocacy,
-  },
-  {
-    slug: 'school-reopening-hawban',
-    title: { en: '18th school reopens in Al-Hawban', ar: 'افتتاح المدرسة الثامنة عشرة في الحوبان' },
-    excerpt: { en: 'A milestone for our Safe Learning Spaces program.', ar: 'محطة بارزة لبرنامج فضاءات التعلّم الآمنة.' },
-    body: { en: 'After eight months of rehabilitation, 420 children — half of them girls — return to a fully equipped, safe school in Al-Hawban.', ar: 'بعد ثمانية أشهر من إعادة التأهيل، يعود 420 طفلًا — نصفهم من الفتيات — إلى مدرسة آمنة ومجهّزة في الحوبان.' },
-    date: '2025-10-02',
-    category: { en: 'Field update', ar: 'تحديث ميداني' },
-    image: school,
-  },
-  {
-    slug: 'partnership-giz',
-    title: { en: 'New partnership with GIZ on water security', ar: 'شراكة جديدة مع GIZ في الأمن المائي' },
-    excerpt: { en: 'Expanding solar water systems across two additional governorates.', ar: 'توسيع أنظمة المياه الشمسية لتشمل محافظتين إضافيتين.' },
-    body: { en: 'Ymnt Foundation signed a 24-month partnership agreement with GIZ to scale Water For Life to Ibb and Al-Dhale.', ar: 'وقعت مؤسسة يمنت اتفاقية شراكة مدتها 24 شهرًا مع GIZ لتوسيع مشروع مياه للحياة إلى إب والضالع.' },
-    date: '2025-08-14',
-    category: { en: 'Partnerships', ar: 'شراكات' },
-    image: partnership,
+    image: meeting,
   },
 ];
 
 export const partners = [
-  'UNICEF', 'UN Women', 'OCHA', 'UNDP', 'WFP', 'EU Humanitarian Aid', 'GIZ', 'Save the Children', 'Oxfam', 'IRC', 'NRC', 'CARE',
+  'Shabab Saba Foundation',
+  'Generations Without Qat',
+  'Taiz University',
+  'Local Water Corporation – Taiz',
+  'Taiz Cleaning Fund',
+  'Youth & Sports Office – Taiz',
+  'Ministry of Social Affairs & Labor',
 ];
 
 export const board = [
-  { name: { en: 'Dr. Aisha Al-Sabri', ar: 'د. عائشة الصبري' }, role: { en: 'Chair of the Board', ar: 'رئيسة مجلس الأمناء' } },
-  { name: { en: 'Eng. Khaled Al-Hamdi', ar: 'م. خالد الحمدي' }, role: { en: 'Vice Chair', ar: 'نائب الرئيس' } },
-  { name: { en: 'Dr. Nadia Othman', ar: 'د. نادية عثمان' }, role: { en: 'Treasurer', ar: 'أمينة الصندوق' } },
-  { name: { en: 'Mr. Yusuf Al-Maqtari', ar: 'أ. يوسف المقطري' }, role: { en: 'Secretary', ar: 'أمين السر' } },
-  { name: { en: 'Ms. Hanan Saleh', ar: 'أ. حنان صالح' }, role: { en: 'Board Member', ar: 'عضو مجلس' } },
-  { name: { en: 'Mr. Omar Al-Junaid', ar: 'أ. عمر الجنيد' }, role: { en: 'Board Member', ar: 'عضو مجلس' } },
+  { name: { en: 'Board of Trustees', ar: 'مجلس الأمناء' }, role: { en: 'Governance body', ar: 'الجهة الحاكمة' } },
 ];
 
 export const staff = [
-  { name: { en: 'Sumaya Al-Qadhi', ar: 'سمية القاضي' }, role: { en: 'Executive Director', ar: 'المديرة التنفيذية' } },
-  { name: { en: 'Mohammed Al-Asbahi', ar: 'محمد الأصبحي' }, role: { en: 'Programs Director', ar: 'مدير البرامج' } },
-  { name: { en: 'Lina Hassan', ar: 'لينا حسن' }, role: { en: 'Finance & Compliance', ar: 'المالية والامتثال' } },
-  { name: { en: 'Yara Al-Najjar', ar: 'يارا النجار' }, role: { en: 'MEAL Manager', ar: 'مديرة الرصد والتقييم' } },
-  { name: { en: 'Adel Al-Mikhlafi', ar: 'عادل المخلافي' }, role: { en: 'Safeguarding Lead', ar: 'مسؤول الصون' } },
-  { name: { en: 'Maha Al-Eryani', ar: 'مها الإرياني', }, role: { en: 'Partnerships Manager', ar: 'مديرة الشراكات' } },
+  { name: { en: 'Executive Management', ar: 'الإدارة التنفيذية' }, role: { en: 'Operations & Programs', ar: 'العمليات والبرامج' } },
+  { name: { en: 'Finance & Compliance Unit', ar: 'وحدة المالية والامتثال' }, role: { en: 'Accountability', ar: 'المساءلة' } },
+  { name: { en: 'MEAL Unit', ar: 'وحدة الرصد والتقييم والتعلم والمساءلة' }, role: { en: 'Monitoring & Learning', ar: 'الرصد والتعلم' } },
+  { name: { en: 'Safeguarding Focal Point', ar: 'مسؤول الصون' }, role: { en: 'PSEA & Protection', ar: 'الحماية ومنع الاستغلال' } },
 ];
 
-export const opportunities = [
-  { title: { en: 'MEAL Officer — Taiz', ar: 'موظف رصد وتقييم — تعز' }, type: { en: 'Full-time', ar: 'دوام كامل' }, location: { en: 'Taiz', ar: 'تعز' }, deadline: '2026-06-30' },
-  { title: { en: 'Climate Adaptation Consultant', ar: 'استشاري التكيّف المناخي' }, type: { en: 'Consultancy', ar: 'استشارة' }, location: { en: 'Remote / Yemen', ar: 'عن بُعد / اليمن' }, deadline: '2026-06-15' },
-  { title: { en: 'Tender — Solar pumps procurement', ar: 'مناقصة — توريد مضخات شمسية' }, type: { en: 'Tender', ar: 'مناقصة' }, location: { en: 'Ibb', ar: 'إب' }, deadline: '2026-07-05' },
-];
+export const opportunities: any[] = [];
 
 export const policies = [
-  { key: 'child-protection', en: 'Child Protection Policy', ar: 'سياسة حماية الطفل' },
-  { key: 'psea', en: 'PSEA Policy', ar: 'سياسة الوقاية من الاستغلال والاعتداء الجنسي' },
-  { key: 'anti-corruption', en: 'Anti-Corruption & Fraud Policy', ar: 'سياسة مكافحة الفساد والاحتيال' },
-  { key: 'code-of-conduct', en: 'Code of Conduct', ar: 'مدونة السلوك' },
-  { key: 'whistleblowing', en: 'Whistleblowing Policy', ar: 'سياسة الإبلاغ عن المخالفات' },
-  { key: 'data-protection', en: 'Data Protection Policy', ar: 'سياسة حماية البيانات' },
+  { key: 'hr', en: 'Human Resources Manual', ar: 'دليل الموارد البشرية' },
+  { key: 'finance', en: 'Financial Management Manual', ar: 'دليل الإدارة المالية' },
+  { key: 'procurement', en: 'Procurement & Logistics Manual', ar: 'دليل المشتريات واللوجستيات' },
+  { key: 'governance', en: 'Governance Manual (Conflict of Interest, Whistleblowing, Transparency, Code of Conduct)', ar: 'دليل الحوكمة (تضارب المصالح، حماية المبلغين، الشفافية، مدونة السلوك)' },
+  { key: 'do-no-harm', en: 'Do No Harm & Risk Management Matrix', ar: 'مبدأ عدم الإضرار ومصفوفة إدارة المخاطر' },
 ];
 
 export const reports = [
-  { key: 'annual-2024', en: 'Annual Report 2024', ar: 'التقرير السنوي 2024' },
-  { key: 'annual-2023', en: 'Annual Report 2023', ar: 'التقرير السنوي 2023' },
-  { key: 'annual-2022', en: 'Annual Report 2022', ar: 'التقرير السنوي 2022' },
+  { key: 'water-paper-2026', en: 'Working Paper (2026): Water Crisis — From Consumption to Production', ar: 'ورقة عمل (2026): أزمة المياه — من الاستهلاك إلى الإنتاج' },
+  { key: 'water-investigative-2026', en: 'Investigative Report (2026): Deconstructing the Urban Water Crisis in Taiz', ar: 'تقرير استقصائي (2026): تفكيك أزمة المياه الحضرية في تعز' },
+  { key: 'climate-policy-2024', en: 'Policy Paper (2024): Climate Change Impacts in Yemen', ar: 'ورقة سياسات (2024): تأثيرات التغير المناخي في اليمن' },
+  { key: 'justice-policy-2024', en: 'Policy Paper (2024): Barriers to Social & Environmental Justice', ar: 'ورقة سياسات (2024): عوائق العدالة الاجتماعية والبيئية' },
+  { key: 'solar-cooker-guide-2022', en: 'Knowledge Guide (2022): Solar Cooker Manufacturing Manual', ar: 'دليل معرفي (2022): دليل صناعة الطباخ الشمسي' },
 ];
 
 export const legalDocs = [
-  { key: 'registration', en: 'NGO Registration Certificate', ar: 'شهادة تسجيل المنظمة' },
-  { key: 'bylaws', en: 'Foundation Bylaws', ar: 'النظام الأساسي' },
-  { key: 'tax-exempt', en: 'Tax Exemption Letter', ar: 'خطاب الإعفاء الضريبي' },
+  { key: 'registration', en: 'NGO Registration Certificate No. 60/M/2025', ar: 'شهادة إشهار رقم (60/م/2025)' },
+  { key: 'license', en: 'Activity Practice License No. 99/2025', ar: 'تصريح مزاولة النشاط رقم (99) لعام 2025' },
 ];
 
 export const financials = [
-  { key: 'audit-2024', en: 'Audited Financial Statements 2024', ar: 'القوائم المالية المدققة 2024' },
-  { key: 'audit-2023', en: 'Audited Financial Statements 2023', ar: 'القوائم المالية المدققة 2023' },
+  { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة' },
+  { key: 'audit', en: 'Audited financial statements (on request)', ar: 'قوائم مالية مدققة (عند الطلب)' },
 ];
