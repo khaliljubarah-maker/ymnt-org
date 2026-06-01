@@ -40,8 +40,8 @@ export const ContactForm = ({ compact = false }: { compact?: boolean }) => {
       {!compact && (
         <aside className="lg:col-span-2 space-y-6">
           <InfoRow icon={MapPin} label={t('contact.address')} value={t('contact.addressValue')} />
-          <InfoRow icon={Mail} label={t('contact.email')} value="info@ymnt-foundation.org" />
-          <InfoRow icon={Phone} label={t('contact.phone')} value="+967 4 123 456" ltr />
+          <InfoRow icon={Mail} label={t('contact.email')} value="info@ymnt.org" />
+          <InfoRow icon={Phone} label={t('contact.phone')} value="+967 777 605 260" ltr />
           <InfoRow icon={Clock} label={t('contact.hours')} value={t('contact.hoursValue')} />
         </aside>
       )}

@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { projects, Category } from '@/data/site';
 import { cn } from '@/lib/utils';
 
-const cats: ('all' | Category)[] = ['all', 'climate', 'education', 'water', 'women', 'protection'];
+const cats: ('all' | Category)[] = ['all', 'climate', 'education', 'advocacy', 'capacity'];
 
 const Projects = () => {
   const { t, i18n } = useTranslation();
