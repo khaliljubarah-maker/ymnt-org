@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.png';
+import logoFull from '@/assets/logo-full.png';
 
 export const Footer = () => {
   const { t } = useTranslation();
@@ -13,9 +13,8 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground mt-24">
       <div className="container-wide py-16 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <div className="flex items-center gap-2.5 mb-4">
-            <img src={logo} alt="" className="h-12 w-12 bg-white rounded-lg p-1" width={48} height={48} />
-            <span className="font-bold leading-tight">{t('brand.name')}</span>
+          <div className="inline-flex bg-white rounded-xl p-3 mb-4 shadow-sm">
+            <img src={logoFull} alt={t('brand.name')} className="h-24 w-auto object-contain" />
           </div>
           <p className="text-sm text-primary-foreground/80 leading-relaxed">{t('footer.about')}</p>
           <p className="text-xs mt-4 text-primary-foreground/60">{t('footer.registered')}</p>

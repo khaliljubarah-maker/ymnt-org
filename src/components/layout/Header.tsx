@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
 import { Menu, X, Globe, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.png';
+import logoMark from '@/assets/logo-mark.png';
+import logoHorizontal from '@/assets/logo-horizontal.png';
 import { cn } from '@/lib/utils';
 
 export const Header = () => {
@@ -39,11 +40,21 @@ export const Header = () => {
       scrolled || open ? 'bg-background/95 backdrop-blur-md shadow-sm border-b border-border' : 'bg-transparent',
     )}>
       <div className="container-wide flex items-center justify-between h-16 md:h-20 gap-4">
-        <Link to="/" className="flex items-center gap-2.5 group shrink-0">
-          <img src={logo} alt="" className="h-10 w-10 object-contain" width={40} height={40} />
-          <span className={cn('hidden sm:block font-bold leading-tight text-sm md:text-base transition-colors',
-            scrolled || open ? 'text-foreground' : 'text-white')}>
-            {t('brand.short')}
+        <Link to="/" className="flex items-center gap-2.5 group shrink-0" aria-label={t('brand.name')}>
+          <span className={cn(
+            'rounded-md transition-all',
+            scrolled || open ? '' : 'bg-white/95 backdrop-blur-sm px-2 py-1 shadow-sm',
+          )}>
+            <img
+              src={logoHorizontal}
+              alt={t('brand.name')}
+              className="hidden sm:block h-9 md:h-11 w-auto object-contain"
+            />
+            <img
+              src={logoMark}
+              alt={t('brand.name')}
+              className="sm:hidden h-9 w-9 object-contain"
+            />
           </span>
         </Link>
 
