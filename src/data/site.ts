@@ -147,7 +147,7 @@ export const news: NewsItem[] = [
     body: { en: 'At COP29 in Baku, our delegation called for direct climate finance for Yemeni civil society and a binding loss-and-damage framework for the MENA region.', ar: 'في مؤتمر الأطراف COP29 في باكو، طالب وفدنا بتمويل مناخي مباشر للمجتمع المدني اليمني وإطار ملزم للخسائر والأضرار لمنطقة الشرق الأوسط وشمال أفريقيا.' },
     date: '2025-11-18',
     category: { en: 'Advocacy', ar: 'مناصرة' },
-    image: climate,
+    image: advocacy,
   },
   {
     slug: 'school-reopening-hawban',
@@ -156,7 +156,7 @@ export const news: NewsItem[] = [
     body: { en: 'After eight months of rehabilitation, 420 children — half of them girls — return to a fully equipped, safe school in Al-Hawban.', ar: 'بعد ثمانية أشهر من إعادة التأهيل، يعود 420 طفلًا — نصفهم من الفتيات — إلى مدرسة آمنة ومجهّزة في الحوبان.' },
     date: '2025-10-02',
     category: { en: 'Field update', ar: 'تحديث ميداني' },
-    image: edu,
+    image: school,
   },
   {
     slug: 'partnership-giz',
@@ -165,7 +165,7 @@ export const news: NewsItem[] = [
     body: { en: 'Ymnt Foundation signed a 24-month partnership agreement with GIZ to scale Water For Life to Ibb and Al-Dhale.', ar: 'وقعت مؤسسة يمنت اتفاقية شراكة مدتها 24 شهرًا مع GIZ لتوسيع مشروع مياه للحياة إلى إب والضالع.' },
     date: '2025-08-14',
     category: { en: 'Partnerships', ar: 'شراكات' },
-    image: water,
+    image: partnership,
   },
 ];
 
