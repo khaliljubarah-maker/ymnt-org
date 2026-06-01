@@ -1,14 +1,18 @@
 import { useTranslation } from 'react-i18next';
 import { SectionHeader } from '@/components/SectionHeader';
-import edu from '@/assets/project-education.jpg';
-import climate from '@/assets/project-climate.jpg';
-import water from '@/assets/project-water.jpg';
-import women from '@/assets/project-women.jpg';
-import hero from '@/assets/hero-yemen.jpg';
+import g1 from '@/assets/photos/climate-solar-02.jpg';
+import g2 from '@/assets/photos/youth-training-01.jpg';
+import g3 from '@/assets/photos/community-meeting-01.jpg';
+import g4 from '@/assets/photos/climate-mural-02.jpg';
+import g5 from '@/assets/photos/youth-workshop.jpg';
+import g6 from '@/assets/photos/community-dialogue.jpg';
+import g7 from '@/assets/photos/climate-solar-03.jpg';
+import g8 from '@/assets/photos/youth-graduates.jpg';
+import g9 from '@/assets/photos/community-group.jpg';
 
 export const Gallery = () => {
   const { t } = useTranslation();
-  const imgs = [climate, edu, hero, water, women, climate];
+  const imgs = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
   return (
     <section className="py-20 md:py-28">
       <div className="container-wide">

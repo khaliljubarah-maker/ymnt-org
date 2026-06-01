@@ -1,7 +1,10 @@
-import edu from '@/assets/project-education.jpg';
-import climate from '@/assets/project-climate.jpg';
-import water from '@/assets/project-water.jpg';
-import women from '@/assets/project-women.jpg';
+import edu from '@/assets/photos/youth-training-02.jpg';
+import climate from '@/assets/photos/climate-solar-01.jpg';
+import water from '@/assets/photos/climate-solar-03.jpg';
+import women from '@/assets/photos/community-leadership.jpg';
+import advocacy from '@/assets/photos/youth-banner.jpg';
+import partnership from '@/assets/photos/community-meeting-02.jpg';
+import school from '@/assets/photos/climate-mural-03.jpg';
 
 export type Category = 'climate' | 'education' | 'water' | 'women' | 'protection';
 
