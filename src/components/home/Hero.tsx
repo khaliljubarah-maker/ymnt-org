@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import hero from '@/assets/hero-yemen.jpg';
+import hero from '@/assets/photos/community-forum.jpg';
 
 export const Hero = () => {
   const { t } = useTranslation();
