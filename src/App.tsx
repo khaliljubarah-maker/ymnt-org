@@ -16,6 +16,7 @@ import NewsDetail from "./pages/NewsDetail";
 import Partners from "./pages/Partners";
 import Opportunities from "./pages/Opportunities";
 import Contact from "./pages/Contact";
+import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/news/:slug" element={<NewsDetail />} />
               <Route path="/partners" element={<Partners />} />
               <Route path="/opportunities" element={<Opportunities />} />
+              <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Route>
