@@ -1,24 +1,32 @@
 import { useTranslation } from 'react-i18next';
-import { Handshake } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { PageHero } from '@/components/SectionHeader';
-import { Partners as PartnersSection } from '@/components/home/Partners';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { partners } from '@/data/site';
 
 const Partners = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lng = i18n.language as 'en' | 'ar';
   return (
     <>
       <SEO title={t('partners.title')} description={t('partners.subtitle')} path="/partners" />
       <PageHero title={t('partners.title')} subtitle={t('partners.subtitle')} />
-      <PartnersSection />
-      <section className="py-20">
-        <div className="container-wide max-w-3xl text-center bg-gradient-brand text-primary-foreground rounded-3xl p-12 shadow-elegant">
-          <Handshake className="h-12 w-12 mx-auto mb-4 text-secondary" />
-          <h2 className="text-3xl font-extrabold mb-3">{t('partners.becomePartner')}</h2>
-          <p className="text-primary-foreground/85 mb-6">{t('partners.partnerBody')}</p>
-          <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90"><Link to="/contact">{t('nav.contact')}</Link></Button>
+      <section className="py-16">
+        <div className="container-wide">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            {partners.map(p => (
+              <div key={p.name.en} className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center text-center hover:shadow-elegant transition-shadow">
+                <div className="aspect-[3/2] w-full grid place-items-center mb-4">
+                  <img src={p.logo} alt={p.name[lng]} className="max-h-24 max-w-full object-contain" loading="lazy" />
+                </div>
+                <p className="text-sm font-medium text-foreground/80">{p.name[lng]}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 text-center bg-muted/40 rounded-2xl p-10">
+            <h2 className="text-2xl font-bold mb-2">{t('partners.becomePartner')}</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">{t('partners.partnerBody')}</p>
+          </div>
         </div>
       </section>
     </>

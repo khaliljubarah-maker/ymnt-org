@@ -1,17 +1,48 @@
-import solarCookerImg from '@/assets/photos/climate-cooker.jpg';
-import solarCookerImg2 from '@/assets/photos/youth-solar-cooker.jpg';
-import muralImg from '@/assets/photos/climate-mural-02.jpg';
-import muralImg2 from '@/assets/photos/climate-mural-03.jpg';
-import forumImg from '@/assets/photos/community-forum.jpg';
-import forumImg2 from '@/assets/photos/youth-banner.jpg';
-import youthTraining from '@/assets/photos/youth-training-01.jpg';
-import youthTraining2 from '@/assets/photos/youth-training-02.jpg';
-import youthGraduates from '@/assets/photos/youth-graduates.jpg';
-import dialogue from '@/assets/photos/community-dialogue.jpg';
-import leadership from '@/assets/photos/community-leadership.jpg';
-import solar01 from '@/assets/photos/climate-solar-01.jpg';
-import solar03 from '@/assets/photos/climate-solar-03.jpg';
-import meeting from '@/assets/photos/community-meeting-02.jpg';
+// Project hero images
+import forumP1Cover from '@/assets/photos/forum/forum-01.jpg';
+import forumP2Cover from '@/assets/photos/forum/forum2-01.jpg';
+import noortmonaCover from '@/assets/photos/noortmona/noortmona-01.jpg';
+import sawaseyaCover from '@/assets/photos/sawaseya/sawaseya-02.jpg';
+import sasaCover from '@/assets/photos/sasa-peace/sasa-01.jpg';
+import cookersCover from '@/assets/photos/solar-cookers/cookers-01.jpg';
+
+// Project galleries
+import forumP1a from '@/assets/photos/forum/forum-01.jpg';
+import forumP1b from '@/assets/photos/forum/forum-02.jpg';
+import forumP2a from '@/assets/photos/forum/forum2-01.jpg';
+import forumP2b from '@/assets/photos/forum/forum2-02.jpg';
+import forumP2c from '@/assets/photos/forum/forum2-03.jpg';
+import forumP2d from '@/assets/photos/forum/forum2-04.jpg';
+
+import noort1 from '@/assets/photos/noortmona/noortmona-01.jpg';
+import noort2 from '@/assets/photos/noortmona/noortmona-02.jpg';
+import noort3 from '@/assets/photos/noortmona/noortmona-03.jpg';
+import noort4 from '@/assets/photos/noortmona/noortmona-04.jpg';
+import noort5 from '@/assets/photos/noortmona/noortmona-05.jpg';
+import noort6 from '@/assets/photos/noortmona/noortmona-06.jpg';
+
+import saw1 from '@/assets/photos/sawaseya/sawaseya-01.jpg';
+import saw2 from '@/assets/photos/sawaseya/sawaseya-02.jpg';
+import saw3 from '@/assets/photos/sawaseya/sawaseya-03.jpg';
+import saw4 from '@/assets/photos/sawaseya/sawaseya-04.jpg';
+import saw5 from '@/assets/photos/sawaseya/sawaseya-05.jpg';
+import saw6 from '@/assets/photos/sawaseya/sawaseya-06.jpg';
+
+import sasa1 from '@/assets/photos/sasa-peace/sasa-01.jpg';
+import sasa2 from '@/assets/photos/sasa-peace/sasa-02.jpg';
+
+import cook1 from '@/assets/photos/solar-cookers/cookers-01.jpg';
+import cook2 from '@/assets/photos/solar-cookers/cookers-02.jpg';
+import cook3 from '@/assets/photos/solar-cookers/cookers-03.jpg';
+import cook4 from '@/assets/photos/solar-cookers/cookers-04.jpg';
+
+// Partner logos
+import pCpcs from '@/assets/partners/cpcs.png';
+import pGenerations from '@/assets/partners/generations-without-qat.png';
+import pLightForMedia from '@/assets/partners/light-for-media.png';
+import pShebaYouth from '@/assets/partners/sheba-youth.png';
+import pYcjf from '@/assets/partners/youth-climate-justice-fund.png';
+import pUnknown from '@/assets/partners/unknown.png';
 
 export type Category = 'climate' | 'education' | 'advocacy' | 'capacity';
 
@@ -23,6 +54,8 @@ export interface Project {
   category: Category;
   status: 'ongoing' | 'completed';
   image: string;
+  gallery?: string[];
+  videoUrl?: string;
   location: { en: string; ar: string };
   beneficiaries: string;
   duration: string;
@@ -48,7 +81,8 @@ export const projects: Project[] = [
     },
     category: 'advocacy',
     status: 'ongoing',
-    image: forumImg2,
+    image: forumP2Cover,
+    gallery: [forumP2a, forumP2b, forumP2c, forumP2d],
     location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
     beneficiaries: '20 youth leaders + community',
     duration: '2025–2026',
@@ -96,7 +130,9 @@ export const projects: Project[] = [
     },
     category: 'capacity',
     status: 'completed',
-    image: forumImg,
+    image: forumP1Cover,
+    gallery: [forumP1a, forumP1b],
+    videoUrl: 'https://www.youtube.com/embed/98r3MOTnHgc',
     location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
     beneficiaries: '20 youth + community',
     duration: '2024',
@@ -148,7 +184,8 @@ export const projects: Project[] = [
     },
     category: 'education',
     status: 'completed',
-    image: youthTraining2,
+    image: sasaCover,
+    gallery: [sasa1, sasa2],
     location: { en: 'Taiz University, Al-Qahira District', ar: 'جامعة تعز، مديرية القاهرة' },
     beneficiaries: '158 direct · 140 indirect',
     duration: '11–30 January 2022',
@@ -196,7 +233,8 @@ export const projects: Project[] = [
     },
     category: 'climate',
     status: 'completed',
-    image: solarCookerImg,
+    image: cookersCover,
+    gallery: [cook1, cook2, cook3, cook4],
     location: { en: 'Taiz Governorate', ar: 'محافظة تعز' },
     beneficiaries: '10 trainees + low-income families',
     duration: '2022',
@@ -244,7 +282,9 @@ export const projects: Project[] = [
     },
     category: 'advocacy',
     status: 'completed',
-    image: muralImg2,
+    image: sawaseyaCover,
+    gallery: [saw1, saw2, saw3, saw4, saw5, saw6],
+    videoUrl: 'https://www.youtube.com/embed/679qE0a8r3E',
     location: { en: 'Taiz – Al-Qahira District (field + digital)', ar: 'تعز - مديرية القاهرة (ميدانياً ورقمياً)' },
     beneficiaries: '1,069 direct · 1,360 indirect',
     duration: '1–30 November 2021',
@@ -292,7 +332,9 @@ export const projects: Project[] = [
     },
     category: 'climate',
     status: 'completed',
-    image: solar01,
+    image: noortmonaCover,
+    gallery: [noort1, noort2, noort3, noort4, noort5, noort6],
+    videoUrl: 'https://www.youtube.com/embed/mQ8G9RXat1U',
     location: { en: 'Taiz – three neighbourhoods', ar: 'تعز - ثلاثة أحياء' },
     beneficiaries: 'Residents of 3 neighbourhoods',
     duration: '2021',
@@ -341,7 +383,7 @@ export const news: NewsItem[] = [
     },
     date: '2026-03-10',
     category: { en: 'Report', ar: 'تقرير' },
-    image: dialogue,
+    image: forumP2b,
   },
   {
     slug: 'forum-graduation-2024',
@@ -359,7 +401,7 @@ export const news: NewsItem[] = [
     },
     date: '2024-12-18',
     category: { en: 'Milestone', ar: 'إنجاز' },
-    image: youthGraduates,
+    image: forumP1b,
   },
   {
     slug: 'environmental-honor-charter',
@@ -377,18 +419,22 @@ export const news: NewsItem[] = [
     },
     date: '2025-09-04',
     category: { en: 'Advocacy', ar: 'مناصرة' },
-    image: meeting,
+    image: forumP2c,
   },
 ];
 
-export const partners = [
-  'Shabab Saba Foundation',
-  'Generations Without Qat',
-  'Taiz University',
-  'Local Water Corporation – Taiz',
-  'Taiz Cleaning Fund',
-  'Youth & Sports Office – Taiz',
-  'Ministry of Social Affairs & Labor',
+export interface Partner {
+  name: { en: string; ar: string };
+  logo: string;
+}
+
+export const partners: Partner[] = [
+  { name: { en: 'Sheba Youth Foundation for Development', ar: 'مؤسسة شباب سبأ للتنمية' }, logo: pShebaYouth },
+  { name: { en: 'Generations Without Qat', ar: 'مؤسسة أجيال بلا قات' }, logo: pGenerations },
+  { name: { en: 'Center for Peace and Climate Studies (CPCS)', ar: 'مركز دراسات السلام والمُناخ' }, logo: pCpcs },
+  { name: { en: 'Youth Climate Justice Fund', ar: 'صندوق العدالة المناخية للشباب' }, logo: pYcjf },
+  { name: { en: 'Light for Media', ar: 'لايت فور ميديا' }, logo: pLightForMedia },
+  { name: { en: 'Partner Organisation', ar: 'منظمة شريكة' }, logo: pUnknown },
 ];
 
 export const board = [
@@ -428,4 +474,74 @@ export const legalDocs = [
 export const financials = [
   { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة' },
   { key: 'audit', en: 'Audited financial statements (on request)', ar: 'قوائم مالية مدققة (عند الطلب)' },
+];
+
+// External resources hosted on Google Drive / YouTube
+export interface ResourceLink {
+  key: string;
+  title: { en: string; ar: string };
+  url: string;
+  type: 'folder' | 'file' | 'video';
+}
+
+export const externalResources: ResourceLink[] = [
+  {
+    key: 'founding-docs',
+    title: { en: 'Founding documents & bylaws', ar: 'ملفات التأسيس والنظام الأساسي' },
+    url: 'https://drive.google.com/drive/folders/1Zkh-RCsM30uVsxVGN94hv0SD93Wap666?usp=sharing',
+    type: 'folder',
+  },
+  {
+    key: 'work-permit-2026',
+    title: { en: 'Activity Practice License 2026', ar: 'تصريح عمل المؤسسة لعام 2026' },
+    url: 'https://drive.google.com/file/d/1FeJHgZP-djkcUekddmkrWJxOqwo6eNKX/view?usp=sharing',
+    type: 'file',
+  },
+  {
+    key: 'bank-accounts',
+    title: { en: 'Foundation bank accounts', ar: 'الحسابات البنكية للمؤسسة' },
+    url: 'https://drive.google.com/drive/folders/1DNe0c9pwPToTMnLaiPYFUHBI-lzPp57K?usp=sharing',
+    type: 'folder',
+  },
+  {
+    key: 'policies-manuals',
+    title: { en: 'Policies & operational manuals', ar: 'الأدلة والسياسات الخاصة بالمؤسسة' },
+    url: 'https://drive.google.com/drive/folders/1TzWE8hfa05b4evjMuJHsj0z5MwpyjzmN?usp=sharing',
+    type: 'folder',
+  },
+  {
+    key: 'publications',
+    title: { en: 'Publications & knowledge production', ar: 'الإصدارات والإنتاج المعرفي' },
+    url: 'https://drive.google.com/drive/folders/1xfKeURBFeDrf8Q_WgpM4ELLqrdHHqnar?usp=sharing',
+    type: 'folder',
+  },
+];
+
+export interface VideoItem {
+  key: string;
+  title: { en: string; ar: string };
+  youtubeId: string;
+}
+
+export const videos: VideoItem[] = [
+  {
+    key: 'forum-1',
+    title: { en: 'Climate & Social Justice Forum — Phase I', ar: 'منتدى العدالة الاجتماعية والمناخية — المرحلة الأولى' },
+    youtubeId: '98r3MOTnHgc',
+  },
+  {
+    key: 'noortmona',
+    title: { en: 'Noortmona — Solar Lighting Project', ar: 'مشروع نورتمونا — الإنارة الشمسية' },
+    youtubeId: 'mQ8G9RXat1U',
+  },
+  {
+    key: 'sawaseya-misk',
+    title: { en: 'Sawaseya Success Story: Misk', ar: 'قصة نجاح مسك من مشروع سواسية' },
+    youtubeId: '679qE0a8r3E',
+  },
+  {
+    key: 'sawaseya-akram',
+    title: { en: 'Sawaseya Success Story: Akram', ar: 'قصة نجاح أكرم من مشروع سواسية' },
+    youtubeId: 'hQ_q3j3uI-U',
+  },
 ];
