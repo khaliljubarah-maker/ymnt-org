@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next';
 import { SectionHeader } from '@/components/SectionHeader';
-import g1 from '@/assets/photos/climate-solar-02.jpg';
-import g2 from '@/assets/photos/youth-training-01.jpg';
-import g3 from '@/assets/photos/community-meeting-01.jpg';
-import g4 from '@/assets/photos/climate-mural-02.jpg';
-import g5 from '@/assets/photos/youth-workshop.jpg';
-import g6 from '@/assets/photos/community-dialogue.jpg';
-import g7 from '@/assets/photos/climate-solar-03.jpg';
-import g8 from '@/assets/photos/youth-graduates.jpg';
-import g9 from '@/assets/photos/community-group.jpg';
+import g1 from '@/assets/photos/forum/forum2-01.jpg';
+import g2 from '@/assets/photos/solar-cookers/cookers-01.jpg';
+import g3 from '@/assets/photos/noortmona/noortmona-02.jpg';
+import g4 from '@/assets/photos/sawaseya/sawaseya-02.jpg';
+import g5 from '@/assets/photos/sasa-peace/sasa-01.jpg';
+import g6 from '@/assets/photos/forum/forum-01.jpg';
+import g7 from '@/assets/photos/solar-cookers/cookers-03.jpg';
+import g8 from '@/assets/photos/noortmona/noortmona-04.jpg';
+import g9 from '@/assets/photos/sawaseya/sawaseya-05.jpg';
 
 export const Gallery = () => {
   const { t } = useTranslation();

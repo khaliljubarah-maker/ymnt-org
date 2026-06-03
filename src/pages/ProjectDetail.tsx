@@ -50,6 +50,35 @@ const ProjectDetail = () => {
                   ))}
                 </ul>
               </div>
+
+              {p.videoUrl && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold mb-4">{t('projects.video')}</h2>
+                  <div className="relative aspect-video rounded-2xl overflow-hidden shadow-elegant bg-black">
+                    <iframe
+                      src={p.videoUrl}
+                      title={p.title[lng]}
+                      loading="lazy"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {p.gallery && p.gallery.length > 0 && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold mb-4">{t('projects.gallery')}</h2>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                    {p.gallery.map((src, i) => (
+                      <div key={i} className="aspect-[4/3] overflow-hidden rounded-xl">
+                        <img src={src} alt="" loading="lazy" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
             <aside className="lg:sticky lg:top-28 self-start">
               <div className="bg-card border border-border rounded-2xl p-6 space-y-4">
