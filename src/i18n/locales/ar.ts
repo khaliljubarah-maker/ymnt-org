@@ -14,6 +14,7 @@ export default {
     news: 'الأخبار',
     partners: 'الشركاء',
     opportunities: 'الفرص',
+    resources: 'الإصدارات والوثائق',
     contact: 'تواصل معنا',
     donate: 'ادعمنا',
   },

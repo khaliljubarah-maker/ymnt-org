@@ -119,6 +119,7 @@ export default {
     videos: 'Project videos',
     videosBody: 'Watch our work and success stories from the field.',
     type: { folder: 'Folder', file: 'Document', video: 'Video' },
+  },
   governance: {
     title: 'Governance & Transparency',
     subtitle: 'We adhere to the highest standards of governance and transparency recognised by international donors.',
