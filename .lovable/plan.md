@@ -1,57 +1,50 @@
-
 ## What I'll do
 
-### 1. Re-extract project images correctly (per project)
-The current photos folder mixes images across projects. I'll extract images from each new DOCX into its own folder and re-link them per project:
+### 1. Update Team data (`src/data/site.ts`)
+Replace the placeholder `staff` array with the real 7-member team from the PDF org chart (AR/EN names + roles):
 
-- `‏‏ملخص_مشروع_المنتدى` + `‏‏ملخص_منتدى_2` → **Climate & Social Justice Forum (Phases I & II)** → `src/assets/photos/forum/`
-- `‏‏ملخص_مشروع_نورتمونا` → **Noortmona** → `src/assets/photos/noortmona/`
-- `‏‏ملخص_سواسية` → **Sawaseya** → `src/assets/photos/sawaseya/`
-- `‏‏ملخص_ساسة_سلام` → **Sasa Peace** → `src/assets/photos/sasa-peace/`
-- `‏‏ملخص_مشروع_الطابخات_الشمسية` → **Solar Cookers** → `src/assets/photos/solar-cookers/`
+| Name (EN) | Role |
+|---|---|
+| Maria Adam Seif Ismail | Chairperson |
+| Khalil Ahmed Ali Jubarah | CEO |
+| Muhab Muhammad Abd al-Nour Mahyoub | Financial Officer |
+| Mohammed Abdulrahman Farea Al-Hamadi | Operations Officer |
+| Omaima Khalid Mohammed Asaad | Logistics |
+| Hamdi Abdullah Qaid Ali | Media |
+| Zainab Gamal Abdulrahman Ahmed | MEAL |
 
-Each project in `src/data/site.ts` will get:
-- a correct cover `image` from its own folder
-- a new `gallery: string[]` field (3–6 photos) used on the project detail page
-- old generic photos removed from project mappings
+Add an optional `email` field per member (visible on the team card).
 
-The homepage Gallery and Hero will be updated to use only authentic, well-attributed photos.
+### 2. Add visual org chart on `/team`
+Render a hierarchical organogram above the people list:
 
-### 2. Partner logos
-Extract the 13+ logos from `صور_شعارات_شركاء_مؤسسة_يمنت_للتنمية.pptx` into `src/assets/partners/`, and rewrite `Partners` section + `partners` data in `site.ts` to render real logo images (grayscale → color on hover) instead of text chips.
+```
+                 Chairperson (Maria)
+                        │
+                       CEO (Khalil)
+        ┌───────────────┼───────────────┐
+   Financial        Operations        Project
+   (Muhab)         (Mohammed)        Coordinator
+                        │
+        ┌───────────────┼───────────────┐
+      Media           MEAL          Logistics
+     (Hamdi)        (Zainab)        (Omaima)
+```
 
-### 3. New "Resources" page (الإصدارات والوثائق)
-Add `/resources` route + nav entry (AR/EN) with cards linking out to Google Drive / YouTube:
+Built with CSS grid + connector lines (no extra libs), responsive (stacks vertically on mobile), RTL-aware.
 
-- ملفات التأسيس والنظام الأساسي
-- تصريح العمل 2026
-- الحسابات البنكية
-- الأدلة والسياسات
-- الإصدارات والإنتاج المعرفي
-- فيديوهات: منتدى العدالة 1، نورتمونا، قصة نجاح مسك، قصة نجاح أكرم (embedded YouTube)
+### 3. Wire real social media links
+Replace the placeholder `href="#"` social icons in `Footer.tsx` with:
+- Facebook → `https://www.facebook.com/ymnt20/`
+- LinkedIn → `https://www.linkedin.com/company/ymnt/`
+- YouTube → `https://www.youtube.com/@ymnt20`
+- Remove Twitter (no account provided)
 
-Also surface the relevant video on each matching project detail page, and add a "Publications & Media" block to the homepage linking to the resources page.
+Same links added to the Contact page social row if present.
 
-### 4. Logo swaps (header behavior + footer)
-- **Footer**: replace current `logo-full.png` with the new white square logo (`الشعار_المربع` white version from `صورة2000000000000000000.png`). Drop the white card wrapper since logo is already white-on-transparent.
-- **Header**: two horizontal logo variants
-  - At top (transparent pink hero background) → show **white** horizontal logo (`11111111111111111.png`)
-  - After scroll (white background) → show existing **colored** horizontal logo (`logo-horizontal.png`)
-  - Mobile mark icon: same dual behavior using white square (`صورة2000000000000000000.png`) on transparent, colored square (`logo-mark.png`) on white.
-  - Remove the white pill wrapper.
-
-### 5. Translations & SEO
-Add AR/EN strings for the Resources page, video labels, and partner section. Update sitemap-relevant nav entries.
-
-## Technical notes
-
-- I'll script extraction via Python (`zipfile` + `python-docx` not required; DOCX images live in `word/media/`).
-- Partner PPTX: unzip and pull `ppt/media/*` images.
-- Videos: embed via responsive `<iframe>` with `youtube-nocookie.com` for privacy.
-- All new images go through `lovable-assets` only if large; small logos can stay in repo since they're <100KB each.
-- No backend changes; all data lives in `src/data/site.ts` and `src/i18n/locales/*`.
+### 4. Translations
+Add AR/EN strings for `team.orgChart` heading and any new labels.
 
 ## Out of scope
-- Newsletter backend wiring
-- Donation payments
-- CMS — content remains in `site.ts`
+- Personal photos (PDF doesn't include headshots — initials avatars remain)
+- Phone/ID card data (kept private)
