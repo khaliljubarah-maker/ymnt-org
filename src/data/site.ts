@@ -437,15 +437,66 @@ export const partners: Partner[] = [
   { name: { en: 'Partner Organisation', ar: 'منظمة شريكة' }, logo: pUnknown },
 ];
 
-export const board = [
-  { name: { en: 'Board of Trustees', ar: 'مجلس الأمناء' }, role: { en: 'Governance body', ar: 'الجهة الحاكمة' } },
+export interface TeamMember {
+  name: { en: string; ar: string };
+  role: { en: string; ar: string };
+  email?: string;
+  reportsTo?: 'chair' | 'ceo' | 'ops';
+  key?: string;
+}
+
+export const board: TeamMember[] = [
+  {
+    key: 'chair',
+    name: { en: 'Maria Adam Seif Ismail', ar: 'ماريا آدم سيف إسماعيل' },
+    role: { en: 'Chairperson — Board of Trustees', ar: 'رئيسة مجلس الأمناء' },
+    email: 'mariaadmsayf@gmail.com',
+  },
 ];
 
-export const staff = [
-  { name: { en: 'Executive Management', ar: 'الإدارة التنفيذية' }, role: { en: 'Operations & Programs', ar: 'العمليات والبرامج' } },
-  { name: { en: 'Finance & Compliance Unit', ar: 'وحدة المالية والامتثال' }, role: { en: 'Accountability', ar: 'المساءلة' } },
-  { name: { en: 'MEAL Unit', ar: 'وحدة الرصد والتقييم والتعلم والمساءلة' }, role: { en: 'Monitoring & Learning', ar: 'الرصد والتعلم' } },
-  { name: { en: 'Safeguarding Focal Point', ar: 'مسؤول الصون' }, role: { en: 'PSEA & Protection', ar: 'الحماية ومنع الاستغلال' } },
+export const staff: TeamMember[] = [
+  {
+    key: 'ceo',
+    name: { en: 'Khalil Ahmed Ali Jubarah', ar: 'خليل أحمد علي جبارة' },
+    role: { en: 'Chief Executive Officer (CEO)', ar: 'المدير التنفيذي' },
+    email: 'Khaliljubarah@gmail.com',
+    reportsTo: 'chair',
+  },
+  {
+    key: 'finance',
+    name: { en: 'Muhab Muhammad Abd al-Nour Mahyoub', ar: 'مهاب محمد عبدالنور مهيوب' },
+    role: { en: 'Financial Officer', ar: 'المسؤول المالي' },
+    email: 'acc.muhab@gmail.com',
+    reportsTo: 'ceo',
+  },
+  {
+    key: 'ops',
+    name: { en: 'Mohammed Abdulrahman Farea Al-Hamadi', ar: 'محمد عبدالرحمن فارع الحمادي' },
+    role: { en: 'Operations Officer', ar: 'مسؤول العمليات' },
+    email: 'Alhammmm80@gmail.com',
+    reportsTo: 'ceo',
+  },
+  {
+    key: 'media',
+    name: { en: 'Hamdi Abdullah Qaid Ali', ar: 'حمدي عبدالله قائد علي' },
+    role: { en: 'Media Officer', ar: 'مسؤول الإعلام' },
+    email: 'hamdialhilali0@gmail.com',
+    reportsTo: 'ops',
+  },
+  {
+    key: 'meal',
+    name: { en: 'Zainab Gamal Abdulrahman Ahmed', ar: 'زينب جمال عبدالرحمن أحمد' },
+    role: { en: 'MEAL Officer', ar: 'مسؤولة الرصد والتقييم والتعلم والمساءلة' },
+    email: 'zainabgmal0000@gmail.com',
+    reportsTo: 'ops',
+  },
+  {
+    key: 'logistics',
+    name: { en: 'Omaima Khalid Mohammed Asaad', ar: 'أميمة خالد محمد أسعد' },
+    role: { en: 'Logistics Officer', ar: 'مسؤولة اللوجستيات' },
+    email: 'omaimaasaad4@gmail.com',
+    reportsTo: 'ops',
+  },
 ];
 
 export const opportunities: any[] = [];
