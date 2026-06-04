@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from 'lucide-react';
+import { Facebook, Linkedin, Youtube, Mail, MapPin, Phone } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import logoFull from '@/assets/logos/logo-mark-white.png';
@@ -39,8 +39,13 @@ export const Footer = () => {
             <li className="flex gap-2"><Phone className="h-4 w-4 mt-0.5 shrink-0" /> <span dir="ltr">+967 777 605 260</span></li>
           </ul>
           <div className="flex gap-3 mt-5">
-            {[Facebook, Twitter, Linkedin, Youtube].map((Icon, i) => (
-              <a key={i} href="#" aria-label="social" className="h-9 w-9 grid place-items-center rounded-full bg-primary-foreground/10 hover:bg-secondary transition-colors">
+            {[
+              { Icon: Facebook, href: 'https://www.facebook.com/ymnt20/', label: 'Facebook' },
+              { Icon: Linkedin, href: 'https://www.linkedin.com/company/ymnt/', label: 'LinkedIn' },
+              { Icon: Youtube, href: 'https://www.youtube.com/@ymnt20', label: 'YouTube' },
+            ].map(({ Icon, href, label }) => (
+              <a key={label} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
+                className="h-9 w-9 grid place-items-center rounded-full bg-primary-foreground/10 hover:bg-secondary transition-colors">
                 <Icon className="h-4 w-4" />
               </a>
             ))}
