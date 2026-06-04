@@ -21,7 +21,8 @@ export const ContactForm = ({ compact = false }: { compact?: boolean }) => {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = Object.fromEntries(fd.entries());
     const parsed = schema.safeParse(data);
     if (!parsed.success) {
@@ -29,10 +30,13 @@ export const ContactForm = ({ compact = false }: { compact?: boolean }) => {
       return;
     }
     setLoading(true);
-    await new Promise(r => setTimeout(r, 800));
+    const { name, email, subject, message } = parsed.data;
+    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+    const mailto = `mailto:info@ymnt.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
     setLoading(false);
     toast.success(t('contact.form.success'));
-    e.currentTarget.reset();
+    form.reset();
   };
 
   return (
@@ -67,6 +71,7 @@ export const ContactForm = ({ compact = false }: { compact?: boolean }) => {
         <Button type="submit" disabled={loading} size="lg" className="bg-primary hover:bg-primary/90 w-full sm:w-auto">
           {loading ? t('common.sending') : t('contact.form.submit')}
         </Button>
+        <p className="text-xs text-muted-foreground pt-1">{t('contact.form.note')}</p>
       </form>
     </div>
   );
