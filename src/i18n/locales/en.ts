@@ -83,6 +83,7 @@ export default {
       body: 'Your support funds climate action, advocacy, capacity building and protection programs — fully accounted for and aligned with international standards.',
       cta: 'Partner with us',
       partner: 'Contact our team',
+      supportSubject: 'Support Ymnt For Development Foundation',
     },
     contact: { title: 'Get in touch', subtitle: 'Questions, partnerships, media inquiries — we would love to hear from you.' },
     newsletter: { title: 'Stay informed', body: 'Subscribe to our newsletter for stories, reports and opportunities.', placeholder: 'Your email address', cta: 'Subscribe' },
@@ -174,6 +175,7 @@ export default {
       submit: 'Send message',
       success: 'Thank you! Your message has been received.',
       error: 'Please complete all required fields.',
+      note: 'Your default email app will open to send the message to info@ymnt.org.',
     },
   },
   footer: {
