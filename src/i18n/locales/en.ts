@@ -135,6 +135,7 @@ export default {
     subtitle: 'Governance bodies and operational units.',
     board: 'Governance',
     staff: 'Operational units',
+    orgChart: 'Organisational chart',
   },
   news: {
     title: 'News & Stories',
