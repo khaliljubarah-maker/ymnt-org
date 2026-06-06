@@ -1,5 +1,6 @@
 import { SEO } from '@/components/SEO';
 import { Hero } from '@/components/home/Hero';
+import { StoryVideo } from '@/components/home/StoryVideo';
 import { ClimateBanner } from '@/components/home/ClimateBanner';
 import { Stats } from '@/components/home/Stats';
 import { VisionMission } from '@/components/home/VisionMission';
@@ -21,6 +22,7 @@ const Index = () => {
       <SEO />
       <Hero />
       <ClimateBanner />
+      <StoryVideo />
       <Stats />
       <VisionMission />
       <Objectives />

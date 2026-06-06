@@ -5,7 +5,7 @@ import { PageHero } from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { policies, reports, legalDocs, financials } from '@/data/site';
 
-const DocList = ({ title, icon: Icon, docs }: { title: string; icon: any; docs: { key: string; en: string; ar: string }[] }) => {
+const DocList = ({ title, icon: Icon, docs }: { title: string; icon: any; docs: { key: string; en: string; ar: string; url?: string }[] }) => {
   const { t, i18n } = useTranslation();
   const lng = i18n.language as 'en' | 'ar';
   return (
@@ -19,7 +19,13 @@ const DocList = ({ title, icon: Icon, docs }: { title: string; icon: any; docs: 
           <li key={d.key} className="py-3 flex items-center justify-between gap-4">
             <span className="flex items-center gap-3 text-sm font-medium"><FileText className="h-4 w-4 text-muted-foreground shrink-0" />{d[lng]}</span>
             <Button asChild variant="ghost" size="sm" className="shrink-0">
-              <a href="#" onClick={(e) => e.preventDefault()} aria-label={`${t('common.download')} ${d[lng]}`}>
+              <a
+                href={d.url ?? '#'}
+                target={d.url ? '_blank' : undefined}
+                rel={d.url ? 'noopener noreferrer' : undefined}
+                onClick={d.url ? undefined : (e) => e.preventDefault()}
+                aria-label={`${t('common.download')} ${d[lng]}`}
+              >
                 <Download className="h-4 w-4 me-1" />{t('common.download')}
               </a>
             </Button>

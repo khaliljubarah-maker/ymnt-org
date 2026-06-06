@@ -501,30 +501,38 @@ export const staff: TeamMember[] = [
 
 export const opportunities: any[] = [];
 
-export const policies = [
-  { key: 'hr', en: 'Human Resources Manual', ar: 'دليل الموارد البشرية' },
-  { key: 'finance', en: 'Financial Management Manual', ar: 'دليل الإدارة المالية' },
-  { key: 'procurement', en: 'Procurement & Logistics Manual', ar: 'دليل المشتريات واللوجستيات' },
-  { key: 'governance', en: 'Governance Manual (Conflict of Interest, Whistleblowing, Transparency, Code of Conduct)', ar: 'دليل الحوكمة (تضارب المصالح، حماية المبلغين، الشفافية، مدونة السلوك)' },
-  { key: 'do-no-harm', en: 'Do No Harm & Risk Management Matrix', ar: 'مبدأ عدم الإضرار ومصفوفة إدارة المخاطر' },
+export interface DocLink { key: string; en: string; ar: string; url?: string }
+
+export const policies: DocLink[] = [
+  { key: 'hr', en: 'Human Resources Manual', ar: 'دليل الموارد البشرية', url: 'https://drive.google.com/file/d/1twMlVMx33V3LVmOtriQvCDqJqKTwDUMX/view?usp=drive_link' },
+  { key: 'finance', en: 'Financial Management Manual', ar: 'دليل الإدارة المالية', url: 'https://drive.google.com/file/d/18j6RsqjaHTOtSl7fybqEeE51ad9rFftW/view?usp=drive_link' },
+  { key: 'procurement', en: 'Procurement & Logistics Manual', ar: 'دليل المشتريات واللوجستيات', url: 'https://drive.google.com/file/d/1xrSbQAT5EwYm5X8G05sZWfB-uYi93JOs/view?usp=drive_link' },
+  { key: 'governance', en: 'Governance Manual (Conflict of Interest, Whistleblowing, Transparency, Code of Conduct)', ar: 'دليل الحوكمة (تضارب المصالح، حماية المبلغين، الشفافية، مدونة السلوك)', url: 'https://drive.google.com/file/d/1sMpqBbKFrLDzkpoG5Cr4WXSIXknUd6cx/view?usp=drive_link' },
+  { key: 'do-no-harm', en: 'Project Proposal Writing Manual, Do No Harm Principle & Risk Management Matrix', ar: 'دليل كتابة مقترحات المشاريع ومبدأ عدم الإضرار ومصفوفة إدارة المخاطر', url: 'https://drive.google.com/file/d/1qDD4FouAHoYuUWTVUwRIFlTJavi81E2w/view?usp=drive_link' },
 ];
 
-export const reports = [
-  { key: 'water-paper-2026', en: 'Working Paper (2026): Water Crisis — From Consumption to Production', ar: 'ورقة عمل (2026): أزمة المياه — من الاستهلاك إلى الإنتاج' },
+export const reports: DocLink[] = [
+  { key: 'water-paper-2026', en: 'Working Paper (2026): Water Crisis — From Consumption to Production', ar: 'ورقة عمل (2026): أزمة المياه — من الاستهلاك إلى الإنتاج', url: 'https://drive.google.com/file/d/1zTol66U61za5DFlAuXzxDYXv1owDGZwq/view?usp=drive_link' },
   { key: 'water-investigative-2026', en: 'Investigative Report (2026): Deconstructing the Urban Water Crisis in Taiz', ar: 'تقرير استقصائي (2026): تفكيك أزمة المياه الحضرية في تعز' },
-  { key: 'climate-policy-2024', en: 'Policy Paper (2024): Climate Change Impacts in Yemen', ar: 'ورقة سياسات (2024): تأثيرات التغير المناخي في اليمن' },
-  { key: 'justice-policy-2024', en: 'Policy Paper (2024): Barriers to Social & Environmental Justice', ar: 'ورقة سياسات (2024): عوائق العدالة الاجتماعية والبيئية' },
-  { key: 'solar-cooker-guide-2022', en: 'Knowledge Guide (2022): Solar Cooker Manufacturing Manual', ar: 'دليل معرفي (2022): دليل صناعة الطباخ الشمسي' },
+  { key: 'climate-policy-2024', en: 'Policy Paper (2024): Climate Change Impacts in Yemen', ar: 'ورقة سياسات (2024): تأثيرات التغير المناخي في اليمن', url: 'https://drive.google.com/file/d/13Y16gtHmcojTesavQG0UkryHO1ruoxlI/view?usp=drive_link' },
+  { key: 'justice-policy-2024', en: 'Policy Paper (2024): Barriers to Social & Environmental Justice', ar: 'ورقة سياسات (2024): عوائق العدالة الاجتماعية والبيئية', url: 'https://drive.google.com/file/d/1CyU3Ylw9v6oRyKBIwERPQnLl9sRkmAtB/view?usp=drive_link' },
+  { key: 'solar-cooker-guide-2022', en: 'Knowledge Guide (2022): Solar Cooker Manufacturing Manual', ar: 'دليل معرفي (2022): دليل صناعة الطباخ الشمسي', url: 'https://drive.google.com/file/d/13l8abUlYRJh-UyCyiWjsHw65J6WQrkS_/view?usp=drive_link' },
+  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1q9C2wNZZ5AQtHY9pW_Ay0N4ruOfPLSOD?usp=sharing' },
+  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/file/d/1rGPhk4reyPUIHaarCyt7xeXKKdJ9X09Y/view?usp=sharing' },
 ];
 
-export const legalDocs = [
-  { key: 'registration', en: 'NGO Registration Certificate No. 60/M/2025', ar: 'شهادة إشهار رقم (60/م/2025)' },
-  { key: 'license', en: 'Activity Practice License No. 99/2025', ar: 'تصريح مزاولة النشاط رقم (99) لعام 2025' },
+export const legalDocs: DocLink[] = [
+  { key: 'license', en: 'Foundation activity practice license', ar: 'تصريح مزاولة نشاط المؤسسة', url: 'https://drive.google.com/file/d/1FeJHgZP-djkcUekddmkrWJxOqwo6eNKX/view?usp=drive_link' },
+  { key: 'bylaws', en: 'Ymnt For Development Foundation bylaws', ar: 'النظام الأساسي لمؤسسة يمنت للتنمية', url: 'https://drive.google.com/file/d/1_dGjKn3YFUmXpDJZ_shphEtE8qk4pkPS/view?usp=drive_link' },
+  { key: 'founding-contract', en: 'Founding application & contract of Ymnt Foundation', ar: 'طلب وعقد تأسيس مؤسسة يمنت للتنمية', url: 'https://drive.google.com/file/d/1-FVveP0zrzPH3Fpfrict_EAbbILbs4g2/view?usp=drive_link' },
+  { key: 'board-trustees', en: 'Board of Trustees and Oversight & Inspection Committee', ar: 'مجلس الأمناء ولجنة الرقابة والتفتيش لمؤسسة يمنت للتنمية', url: 'https://drive.google.com/file/d/1kDX_nuzxIujEgDALlZnITiFpO-9bXQdh/view?usp=drive_link' },
 ];
 
-export const financials = [
-  { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة' },
-  { key: 'audit', en: 'Audited financial statements (on request)', ar: 'قوائم مالية مدققة (عند الطلب)' },
+export const financials: DocLink[] = [
+  { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة', url: 'https://drive.google.com/file/d/18O9ioAdz7HH9Uh_KiAmLTmuqdLJAI-WG/view?usp=sharing' },
+  { key: 'audit', en: 'Audited financial statements', ar: 'قوائم مالية مدققة', url: 'https://drive.google.com/file/d/1tWq8pN3kBz_hrXuKc_4TrDAR48PL9HT7/view?usp=sharing' },
+  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1q9C2wNZZ5AQtHY9pW_Ay0N4ruOfPLSOD?usp=sharing' },
+  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/file/d/1rGPhk4reyPUIHaarCyt7xeXKKdJ9X09Y/view?usp=sharing' },
 ];
 
 // External resources hosted on Google Drive / YouTube

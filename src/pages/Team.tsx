@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Mail } from 'lucide-react';
+
 import { SEO } from '@/components/SEO';
 import { PageHero } from '@/components/SectionHeader';
 import { board, staff, type TeamMember } from '@/data/site';
@@ -36,11 +36,6 @@ const Team = () => {
       <div className="min-w-0 flex-1">
         <div className="font-bold leading-snug">{m.name[lng]}</div>
         <div className="text-sm text-muted-foreground mt-1">{m.role[lng]}</div>
-        {m.email && (
-          <a href={`mailto:${m.email}`} className="mt-2 inline-flex items-center gap-1.5 text-xs text-primary hover:underline" dir="ltr">
-            <Mail className="h-3 w-3" /> {m.email}
-          </a>
-        )}
       </div>
     </div>
   );
