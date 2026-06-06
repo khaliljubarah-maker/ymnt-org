@@ -78,6 +78,7 @@ export default {
     },
     news: { title: 'Latest news', subtitle: 'Updates, reports and stories from the field.' },
     gallery: { title: 'From the field', subtitle: 'Moments captured across our programs.' },
+    storyVideo: { title: 'Our story & impact', subtitle: 'Discover the journey and community impact of Ymnt For Development Foundation.' },
     donate: {
       title: 'Build sustainable partnerships with us.',
       body: 'Your support funds climate action, advocacy, capacity building and protection programs — fully accounted for and aligned with international standards.',
@@ -129,7 +130,7 @@ export default {
     legal: 'Registration & legal',
     financial: 'Financial accountability',
     structure: 'Organisational structure',
-    structureBody: 'The Foundation is governed by a General Assembly, a Board of Trustees and an Executive Management team, supported by an integrated risk and compliance matrix (security, operational, financial and legal) with strict adherence to the Do No Harm principle.',
+    structureBody: 'Under the supervision of the Board of Trustees and the leadership of Executive Management, Ymnt For Development Foundation operates within robust governance frameworks that include an integrated risk management matrix (security, operational, financial and legal), with the Do No Harm principle enshrined as a core pillar across all Foundation projects.',
   },
   team: {
     title: 'Our Team',
