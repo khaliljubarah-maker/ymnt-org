@@ -33,7 +33,7 @@ export const Header = () => {
     { to: '/team', label: t('nav.team') },
     { to: '/news', label: t('nav.news') },
     { to: '/partners', label: t('nav.partners') },
-    { to: '/resources', label: t('nav.resources') },
+    
     { to: '/opportunities', label: t('nav.opportunities') },
     { to: '/contact', label: t('nav.contact') },
   ];
