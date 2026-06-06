@@ -517,8 +517,6 @@ export const reports: DocLink[] = [
   { key: 'climate-policy-2024', en: 'Policy Paper (2024): Climate Change Impacts in Yemen', ar: 'ورقة سياسات (2024): تأثيرات التغير المناخي في اليمن', url: 'https://drive.google.com/file/d/13Y16gtHmcojTesavQG0UkryHO1ruoxlI/view?usp=drive_link' },
   { key: 'justice-policy-2024', en: 'Policy Paper (2024): Barriers to Social & Environmental Justice', ar: 'ورقة سياسات (2024): عوائق العدالة الاجتماعية والبيئية', url: 'https://drive.google.com/file/d/1CyU3Ylw9v6oRyKBIwERPQnLl9sRkmAtB/view?usp=drive_link' },
   { key: 'solar-cooker-guide-2022', en: 'Knowledge Guide (2022): Solar Cooker Manufacturing Manual', ar: 'دليل معرفي (2022): دليل صناعة الطباخ الشمسي', url: 'https://drive.google.com/file/d/13l8abUlYRJh-UyCyiWjsHw65J6WQrkS_/view?usp=drive_link' },
-  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1q9C2wNZZ5AQtHY9pW_Ay0N4ruOfPLSOD?usp=sharing' },
-  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/file/d/1rGPhk4reyPUIHaarCyt7xeXKKdJ9X09Y/view?usp=sharing' },
 ];
 
 export const legalDocs: DocLink[] = [
@@ -531,8 +529,10 @@ export const legalDocs: DocLink[] = [
 export const financials: DocLink[] = [
   { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة', url: 'https://drive.google.com/file/d/18O9ioAdz7HH9Uh_KiAmLTmuqdLJAI-WG/view?usp=sharing' },
   { key: 'audit', en: 'Audited financial statements', ar: 'قوائم مالية مدققة', url: 'https://drive.google.com/file/d/1tWq8pN3kBz_hrXuKc_4TrDAR48PL9HT7/view?usp=sharing' },
-  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1q9C2wNZZ5AQtHY9pW_Ay0N4ruOfPLSOD?usp=sharing' },
-  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/file/d/1rGPhk4reyPUIHaarCyt7xeXKKdJ9X09Y/view?usp=sharing' },
+  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1WpVvsQc8-hxhVeE6zIma0MFCwNR8fxUz?usp=sharing' },
+  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/drive/folders/1vz6X2hBb1x-A9ichkqlWgYP2BbZwV3by?usp=sharing' },
+  { key: 'bank-accounts', en: 'Bank accounts (certificates)', ar: 'الحسابات البنكية', url: 'https://drive.google.com/drive/folders/1DNe0c9pwPToTMnLaiPYFUHBI-lzPp57K?usp=drive_link' },
+  { key: 'official-agreements', en: 'Official agreements of the Foundation', ar: 'الاتفاقيات الرسمية للمؤسسة', url: 'https://drive.google.com/drive/folders/1jaFnoOCLJ7jnb1lExM8qIyck1dkuWyJo?usp=sharing' },
 ];
 
 // External resources hosted on Google Drive / YouTube
