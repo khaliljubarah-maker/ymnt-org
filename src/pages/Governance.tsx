@@ -70,13 +70,12 @@ const Governance = () => {
             ].map((s) => {
               const Icon = s.icon;
               const lng = (i18n.language as 'en' | 'ar');
+              const handleClick = () => window.open(s.url, '_blank', 'noopener,noreferrer');
               return (
-                <a
+                <button
                   key={s.url}
-                  href={s.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-between gap-4 bg-card border border-border rounded-2xl p-5 md:p-6 hover:border-primary hover:shadow-elegant transition-all"
+                  onClick={handleClick}
+                  className="group flex items-center justify-between gap-4 w-full text-start bg-card border border-border rounded-2xl p-5 md:p-6 hover:border-primary hover:shadow-elegant transition-all cursor-pointer"
                 >
                   <div className="flex items-center gap-4 min-w-0">
                     <div className="h-12 w-12 grid place-items-center rounded-xl bg-primary-soft text-primary shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
@@ -88,7 +87,7 @@ const Governance = () => {
                     </div>
                   </div>
                   <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary shrink-0" />
-                </a>
+                </button>
               );
             })}
           </div>
