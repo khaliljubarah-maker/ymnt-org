@@ -59,6 +59,38 @@ const Governance = () => {
             <DocList title={t('governance.legal')} icon={Scale} docs={legalDocs} />
             <DocList title={t('governance.financial')} icon={FileCheck} docs={financials} />
           </div>
+
+          <div className="mt-12 space-y-4">
+            {[
+              { icon: FolderOpen, ar: 'التقارير الفنية السنوية وتقارير المشاريع', en: 'Annual technical reports & project reports', url: 'https://drive.google.com/drive/folders/1vz6X2hBb1x-A9ichkqlWgYP2BbZwV3by?usp=sharing' },
+              { icon: FileSpreadsheet, ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', en: 'Document cycle & procurement / contracting templates', url: 'https://drive.google.com/drive/folders/1WpVvsQc8-hxhVeE6zIma0MFCwNR8fxUz?usp=sharing' },
+              { icon: Landmark, ar: 'الحسابات البنكية للمؤسسة', en: 'Foundation bank accounts', url: 'https://drive.google.com/drive/folders/1DNe0c9pwPToTMnLaiPYFUHBI-lzPp57K?usp=drive_link' },
+              { icon: Handshake, ar: 'الاتفاقيات الرسمية للمؤسسة', en: 'Official agreements of the Foundation', url: 'https://drive.google.com/drive/folders/1jaFnoOCLJ7jnb1lExM8qIyck1dkuWyJo?usp=sharing' },
+            ].map((s) => {
+              const Icon = s.icon;
+              const lng = (i18n.language as 'en' | 'ar');
+              return (
+                <a
+                  key={s.url}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-between gap-4 bg-card border border-border rounded-2xl p-5 md:p-6 hover:border-primary hover:shadow-elegant transition-all"
+                >
+                  <div className="flex items-center gap-4 min-w-0">
+                    <div className="h-12 w-12 grid place-items-center rounded-xl bg-primary-soft text-primary shrink-0 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      <Icon className="h-6 w-6" />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-base md:text-lg font-bold truncate">{s[lng]}</h3>
+                      <p className="text-xs md:text-sm text-muted-foreground mt-0.5">{lng === 'ar' ? 'فتح الأرشيف على Google Drive' : 'Open archive on Google Drive'}</p>
+                    </div>
+                  </div>
+                  <ExternalLink className="h-5 w-5 text-muted-foreground group-hover:text-primary shrink-0" />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </section>
     </>
