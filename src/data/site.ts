@@ -529,10 +529,6 @@ export const legalDocs: DocLink[] = [
 export const financials: DocLink[] = [
   { key: 'operational-budget', en: 'Detailed operational and programmatic budgets', ar: 'ميزانيات تشغيلية وبرامجية مفصلة', url: 'https://drive.google.com/file/d/18O9ioAdz7HH9Uh_KiAmLTmuqdLJAI-WG/view?usp=sharing' },
   { key: 'audit', en: 'Audited financial statements', ar: 'قوائم مالية مدققة', url: 'https://drive.google.com/file/d/1tWq8pN3kBz_hrXuKc_4TrDAR48PL9HT7/view?usp=sharing' },
-  { key: 'procurement-cycle', en: 'Document cycle & procurement / contracting templates', ar: 'الدورة المستندية ونماذج لعمليات الشراء والتعاقد', url: 'https://drive.google.com/drive/folders/1WpVvsQc8-hxhVeE6zIma0MFCwNR8fxUz?usp=sharing' },
-  { key: 'annual-reports', en: 'Annual technical reports & project reports', ar: 'التقارير الفنية السنوية وتقارير المشاريع', url: 'https://drive.google.com/drive/folders/1vz6X2hBb1x-A9ichkqlWgYP2BbZwV3by?usp=sharing' },
-  { key: 'bank-accounts', en: 'Bank accounts (certificates)', ar: 'الحسابات البنكية', url: 'https://drive.google.com/drive/folders/1DNe0c9pwPToTMnLaiPYFUHBI-lzPp57K?usp=drive_link' },
-  { key: 'official-agreements', en: 'Official agreements of the Foundation', ar: 'الاتفاقيات الرسمية للمؤسسة', url: 'https://drive.google.com/drive/folders/1jaFnoOCLJ7jnb1lExM8qIyck1dkuWyJo?usp=sharing' },
 ];
 
 // External resources hosted on Google Drive / YouTube
