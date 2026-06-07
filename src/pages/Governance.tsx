@@ -1,4 +1,3 @@
-import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FileText, Download, Shield, BookOpen, Scale, FileCheck, Users, FolderOpen, ExternalLink, FileSpreadsheet, Landmark, Handshake } from 'lucide-react';
 import { SEO } from '@/components/SEO';
