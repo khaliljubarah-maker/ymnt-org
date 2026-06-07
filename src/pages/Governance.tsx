@@ -37,7 +37,7 @@ const DocList = ({ title, icon: Icon, docs }: { title: string; icon: any; docs: 
 };
 
 const Governance = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <>
       <SEO title={t('governance.title')} description={t('governance.subtitle')} path="/governance" />
