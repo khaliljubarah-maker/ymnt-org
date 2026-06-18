@@ -180,7 +180,7 @@ export default {
     },
   },
   footer: {
-    about: 'Ymnt For Development Foundation is an independent youth-led Yemeni NGO based in Taiz, working for climate justice, social and environmental justice and peacebuilding.',
+    about: 'Independent youth-led Yemeni NGO in Taiz, advancing climate justice, environmental rights and peacebuilding through community action.',
     quickLinks: 'Quick links',
     programs: 'Programs',
     follow: 'Follow us',

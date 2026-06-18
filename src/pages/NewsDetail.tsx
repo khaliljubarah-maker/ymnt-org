@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, Calendar } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
@@ -11,9 +12,24 @@ const NewsDetail = () => {
   const lng = i18n.language as 'en' | 'ar';
   const n = news.find(x => x.slug === slug);
   if (!n) return <div className="pt-40 container-wide"><Button asChild><Link to="/news">{t('nav.news')}</Link></Button></div>;
+  const articleLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: n.title[lng],
+    description: n.excerpt[lng],
+    image: n.image,
+    datePublished: n.date,
+    inLanguage: lng,
+    author: { '@type': 'Organization', name: 'Ymnt For Development Foundation' },
+    publisher: { '@type': 'Organization', name: 'Ymnt For Development Foundation' },
+    mainEntityOfPage: `https://ymnt-org.lovable.app/news/${n.slug}`,
+  };
   return (
     <>
-      <SEO title={n.title[lng]} description={n.excerpt[lng]} path={`/news/${n.slug}`} />
+      <SEO title={n.title[lng]} description={n.excerpt[lng]} path={`/news/${n.slug}`} ogType="article" ogImage={n.image} />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(articleLd)}</script>
+      </Helmet>
       <article className="pt-28 md:pt-32 pb-20">
         <div className="container-wide max-w-3xl">
           <Button asChild variant="ghost" size="sm" className="mb-6"><Link to="/news"><ArrowLeft className="h-4 w-4 me-1 rtl:rotate-180" />{t('nav.news')}</Link></Button>

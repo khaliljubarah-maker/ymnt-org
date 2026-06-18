@@ -1,0 +1,18 @@
+# Ymnt For Development Foundation
+
+> Independent youth-led Yemeni NGO based in Taiz, working for climate justice, environmental rights and peacebuilding through community-led action.
+
+Ymnt For Development Foundation (مؤسسة يمنت للتنمية) is a registered Yemeni civil-society organisation (Reg. No. 60/M/2025) founded in 2021. It empowers youth, women, vulnerable and marginalised groups, and persons with disabilities through conflict-sensitive programs across climate, governance and social justice.
+
+## Pages
+
+- [Home](/): Overview of the foundation, programs and impact.
+- [About](/about): History, mission, vision and values.
+- [Projects](/projects): Active and completed projects across climate, governance and community resilience.
+- [Governance & Transparency](/governance): Board, organisational structure, financial accountability and official archives.
+- [Team](/team): Leadership, staff and volunteers.
+- [News](/news): Stories, announcements and field updates.
+- [Partners](/partners): Local and international partners.
+- [Opportunities](/opportunities): Open calls, jobs and volunteer roles.
+- [Resources](/resources): Publications, reports and knowledge products.
+- [Contact](/contact): Get in touch, headquarters in Taiz, Yemen.
