@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ymnt-org.lovable.app/sitemap.xml
+Sitemap: https://ymnt.org/sitemap.xml
